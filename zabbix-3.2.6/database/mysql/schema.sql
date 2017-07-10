@@ -232,7 +232,7 @@ CREATE TABLE `httptest` (
 	`delay`                  integer         DEFAULT '60'              NOT NULL,
 	`status`                 integer         DEFAULT '0'               NOT NULL,
 	`variables`              text                                      NOT NULL,
-	`agent`                  varchar(255)    DEFAULT 'Zabbix'          NOT NULL,
+	`agent`                  varchar(255)    DEFAULT 'Banking-mon'     NOT NULL,
 	`authentication`         integer         DEFAULT '0'               NOT NULL,
 	`http_user`              varchar(64)     DEFAULT ''                NOT NULL,
 	`http_password`          varchar(64)     DEFAULT ''                NOT NULL,

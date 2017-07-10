@@ -1,0 +1,15 @@
+root = zabbix-3.2.6\database\mysql\
+
+schema.sql
+235
+DEFAULT 'Zabbix' => DEFAULT 'Banking-mon'
+
+images.sql
+涉及到187张图片的命名，待美工组发回成果后处理
+
+data.sql
+2 
+name改为Banking-mon，lang改为zh_CN,passwd改为68d5921eeb0ff6d59354210b2a7d06b5
+
+这样初始密码变为：bankingmon
+初始语言变成中文

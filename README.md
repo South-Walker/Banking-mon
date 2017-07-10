@@ -1,12 +1,12 @@
 他妈的银行
 ===
 
-基于zabbix的服务器监控系统
+基于zabbix的服务器监控系统<br>
 签到：肖力铭、
 ---
 
 ### Logo
-* ![服务器部分](http://xiaoliming96.com/images/Logo.jpg) 
+![LOGO](http://xiaoliming96.com/images/Logo.jpg) 
 
 ### 待做事项
 

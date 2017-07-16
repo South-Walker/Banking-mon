@@ -20,3 +20,7 @@
 >   * 修改了data.sql，2行，Zabbix => Banking-mon，en_GB => zh_CN, 5fce1b3e34b520afeffb37ce08c7cd66 => 68d5921eeb0ff6d59354210b2a7d06b5
 >   * 结果：编译后web接口管理员初始密码修改为bankingmon，初始语言变成中文
 >   * 备注：密码是32位MD5加密后直接存入库的
+
+#### 2017.7.16
+>* 肖第二次提交
+>   * 修改了images.sql的第182到187条记录，将存储的图片换为了Bankingmon的logo

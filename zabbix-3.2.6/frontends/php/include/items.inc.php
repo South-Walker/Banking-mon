@@ -82,16 +82,16 @@ function get_item_logtype_style($logtype) {
  */
 function item_type2str($type = null) {
 	$types = [
-		ITEM_TYPE_ZABBIX => _('Zabbix agent'),
-		ITEM_TYPE_ZABBIX_ACTIVE => _('Zabbix agent (active)'),
+		ITEM_TYPE_ZABBIX => _('BKM agent'),
+		ITEM_TYPE_ZABBIX_ACTIVE => _('BKM agent (active)'),
 		ITEM_TYPE_SIMPLE => _('Simple check'),
 		ITEM_TYPE_SNMPV1 => _('SNMPv1 agent'),
 		ITEM_TYPE_SNMPV2C => _('SNMPv2 agent'),
 		ITEM_TYPE_SNMPV3 => _('SNMPv3 agent'),
 		ITEM_TYPE_SNMPTRAP => _('SNMP trap'),
-		ITEM_TYPE_INTERNAL => _('Zabbix internal'),
-		ITEM_TYPE_TRAPPER => _('Zabbix trapper'),
-		ITEM_TYPE_AGGREGATE => _('Zabbix aggregate'),
+		ITEM_TYPE_INTERNAL => _('BKM internal'),
+		ITEM_TYPE_TRAPPER => _('BKM trapper'),
+		ITEM_TYPE_AGGREGATE => _('BKM aggregate'),
 		ITEM_TYPE_EXTERNAL => _('External check'),
 		ITEM_TYPE_DB_MONITOR => _('Database monitor'),
 		ITEM_TYPE_IPMI => _('IPMI agent'),

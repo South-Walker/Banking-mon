@@ -87,8 +87,8 @@ foreach ($config as $field => $value) {
  */
 if ($config['authentication_type'] == ZBX_AUTH_INTERNAL) {
 	if (hasRequest('update')) {
-		$messageSuccess = _('Authentication method changed to Zabbix internal');
-		$messageFailed = _('Cannot change authentication method to Zabbix internal');
+		$messageSuccess = _('Authentication method changed to BKM internal');
+		$messageFailed = _('Cannot change authentication method to BKM internal');
 
 		DBstart();
 

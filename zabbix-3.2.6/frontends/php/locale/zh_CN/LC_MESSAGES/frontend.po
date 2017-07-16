@@ -1,15 +1,15 @@
-# Translated by Wesli. 
-# In case of wrong translation, please contact tom3000@126.com
-# my blog www.dajianren.com
-# 20160923
+# Translated by  
+# In case of wrong translation, please contact 
+# 
+# 
 msgid ""
 msgstr ""
-"Project-Id-Version: Zabbix 3.2\n"
+"Project-Id-Version: BonkingMon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-03 21:42+0300\n"
 "PO-Revision-Date: 2017-02-03 06:32+0300\n"
-"Last-Translator: 岂几 <tom3000@126.com>\n"
-"Language-Team: Zabbix <info@zabbix.com>\n"
+"Last-Translator: DZ \n"
+"Language-Team:  NO \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -656,8 +656,8 @@ msgid "Agent or SNMP or JMX or IPMI interface"
 msgstr "agent代理程序或SNMP或JMX或IPMI的接口"
 
 #: include/classes/items/CHelpItems.php:633
-msgid "Aggregate checks do not require any agent running on a host being monitored. Zabbix server collects aggregate information by doing direct database queries. See Zabbix Manual."
-msgstr "聚合检查不需要在被监控主机上运行任何代理程序。Zabbix服务器直接通过数据库查询来收集聚合信息。参阅Zabbix手册。"
+msgid "Aggregate checks do not require any agent running on a host being monitored. BKM server collects aggregate information by doing direct database queries. See BKM Manual."
+msgstr "聚合检查不需要在被监控主机上运行任何代理程序。BKM服务器直接通过数据库查询来收集聚合信息。参阅BKM手册。"
 
 #: include/hosts.inc.php:114 include/views/administration.users.edit.php:48
 #: include/views/administration.users.list.php:42
@@ -1013,7 +1013,7 @@ msgid "Authentication method changed to LDAP"
 msgstr "认证方式改为LDAP"
 
 #: authentication.php:90
-msgid "Authentication method changed to Zabbix internal"
+msgid "Authentication method changed to BKM internal"
 msgstr "认证方式改为系统内部"
 
 #: include/views/configuration.host.discovery.edit.php:131
@@ -1485,8 +1485,8 @@ msgid "Cannot change authentication method to LDAP"
 msgstr "无法变更授权方式为LDAP"
 
 #: authentication.php:91
-msgid "Cannot change authentication method to Zabbix internal"
-msgstr "无法变更授权方式为Zabbix内部"
+msgid "Cannot change authentication method to BKM internal"
+msgstr "无法变更授权方式为BKM内部"
 
 #: httpconf.php:191 httpconf.php:452 items.php:695 items.php:1029
 msgid "Cannot clear history"
@@ -1592,8 +1592,8 @@ msgstr "无法创建配置文件。"
 
 #: include/classes/api/services/CUser.php:1397
 #, c-format
-msgid "Cannot delete Zabbix internal user \"%1$s\", try disabling that user."
-msgstr "无法删除Zabbix内部用户 \"%1$s\", 试试停用这个用户."
+msgid "Cannot delete BKM internal user \"%1$s\", try disabling that user."
+msgstr "无法删除BKM内部用户 \"%1$s\", 试试停用这个用户."
 
 #: actionconf.php:250
 msgid "Cannot delete action"
@@ -2171,8 +2171,8 @@ msgstr "无法读取XML： %1$s 。"
 
 #: include/classes/server/CZabbixServer.php:248
 #, c-format
-msgid "Cannot read the response, check connection with the Zabbix server \"%1$s\"."
-msgstr "不能读取响应, 检查与Zabbix服务器 \"%1$s\" 的连接."
+msgid "Cannot read the response, check connection with the BKM server \"%1$s\"."
+msgstr "不能读取响应, 检查与BKM服务器 \"%1$s\" 的连接."
 
 #: include/views/js/monitoring.history.js.php:36
 msgid "Cannot remove all items, at least one item should remain."
@@ -2189,8 +2189,8 @@ msgstr "无法储存未检验的自动发现规则"
 
 #: include/classes/server/CZabbixServer.php:218
 #, c-format
-msgid "Cannot send command, check connection with Zabbix server \"%1$s\"."
-msgstr "无法发送命令, 检查于Zabbix 服务器 \"%1$s\" 的连接."
+msgid "Cannot send command, check connection with BKM server \"%1$s\"."
+msgstr "无法发送命令, 检查于BKM 服务器 \"%1$s\" 的连接."
 
 #: include/classes/api/services/CAction.php:2381
 #, c-format
@@ -2622,8 +2622,8 @@ msgid "Cannot update web scenario"
 msgstr "无法更新 web 场景"
 
 #: include/views/js/configuration.discovery.edit.js.php:603
-msgid "Cannot validate discovery check: invalid request or connection to Zabbix server failed."
-msgstr "不可用的发现检查：请求不合法或连接到Zabbix服务器失败."
+msgid "Cannot validate discovery check: invalid request or connection to BKM server failed."
+msgstr "不可用的发现检查：请求不合法或连接到BKM服务器失败."
 
 #: include/views/administration.general.regularexpressions.edit.php:46
 msgid "Case sensitive"
@@ -3038,8 +3038,8 @@ msgid "Configuration of IT services"
 msgstr "IT服务的配置"
 
 #: include/audit.inc.php:25
-msgid "Configuration of Zabbix"
-msgstr "Zabbix的配置"
+msgid "Configuration of BKM"
+msgstr "BKM的配置"
 
 #: actionconf.php:27
 msgid "Configuration of actions"
@@ -3196,8 +3196,8 @@ msgid "Confirmation text"
 msgstr "确认文字"
 
 #: include/classes/setup/CSetupWizard.php:399
-msgid "Congratulations! You have successfully installed Zabbix frontend."
-msgstr "恩！不错zabbix前端已经配置好了！千山万水第一步！加油，少年！"
+msgid "Congratulations! You have successfully installed BKM frontend."
+msgstr "恩！不错BKM前端已经配置好了！千山万水第一步！加油，少年！"
 
 #: app/views/administration.proxy.edit.php:45
 #: include/views/configuration.host.edit.php:129
@@ -3214,44 +3214,44 @@ msgstr "安全链接"
 
 #: include/classes/server/CZabbixServer.php:234
 #, c-format
-msgid "Connection timeout of %1$s seconds exceeded when connecting to Zabbix server \"%2$s\"."
-msgstr "连接超时 %1$s 秒超出当连接Zabbix 服务器 \"%2$s\"."
+msgid "Connection timeout of %1$s seconds exceeded when connecting to BKM server \"%2$s\"."
+msgstr "连接超时 %1$s 秒超出当连接BKM 服务器 \"%2$s\"."
 
 #: include/classes/server/CZabbixServer.php:312
 #, c-format
 msgid ""
-"Connection to Zabbix server \"%s\" failed. Possible reasons:\n"
-"1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"Connection to BKM server \"%s\" failed. Possible reasons:\n"
+"1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n"
 "2. Incorrect DNS server configuration.\n"
 msgstr ""
-"连接到Zabbix主机 \"%s\" 失败. 可能的原因是:\n"
-"1. 错误的 IP/DNS 设于 \"zabbix.conf.php\";\n"
+"连接到BKM主机 \"%s\" 失败. 可能的原因是:\n"
+"1. 错误的 IP/DNS 设于 \"bkm.conf.php\";\n"
 "2. 错误的 DNS 主机配置.\n"
 
 #: include/classes/server/CZabbixServer.php:300
 #, c-format
 msgid ""
-"Connection to Zabbix server \"%s\" refused. Possible reasons:\n"
-"1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"Connection to BKM server \"%s\" refused. Possible reasons:\n"
+"1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n"
 "2. Security environment (for example, SELinux) is blocking the connection;\n"
-"3. Zabbix server daemon not running;\n"
+"3. BKM server daemon not running;\n"
 "4. Firewall is blocking TCP connection.\n"
 msgstr ""
-"连接到Zabbix主机  \"%s\" 被拒绝. 可能的原因是:\n"
-"1. 错误的 IP/DNS 设于\"zabbix.conf.php\";\n"
+"连接到BKM主机  \"%s\" 被拒绝. 可能的原因是:\n"
+"1. 错误的 IP/DNS 设于\"BKM.conf.php\";\n"
 "2. 安全环境 (例如, SELinux) 阻断了连接;\n"
-"3. Zabbix主机的服务未运行;\n"
+"3. BKM主机的服务未运行;\n"
 "4. 防火墙阻断了TCP连接.\n"
 
 #: include/classes/server/CZabbixServer.php:308
 #, c-format
 msgid ""
-"Connection to Zabbix server \"%s\" timed out. Possible reasons:\n"
-"1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"Connection to BKM server \"%s\" timed out. Possible reasons:\n"
+"1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n"
 "2. Firewall is blocking TCP connection.\n"
 msgstr ""
-"连接到Zabbix主机  \"%s\" 超时. 可能的原因是:\n"
-"1. 错误的 IP/DNS 设于\"zabbix.conf.php\";\n"
+"连接到BKM主机  \"%s\" 超时. 可能的原因是:\n"
+"1. 错误的 IP/DNS 设于\"BKM.conf.php\";\n"
 "2. 防火牆阻断了TCP连接.\n"
 
 #: include/views/configuration.host.massupdate.php:372
@@ -4480,12 +4480,12 @@ msgid "Difference between MAX and MIN value of a period T is NOT N"
 msgstr "期间T的最大与最小值的差不是 N"
 
 #: popup_trexpr.php:480
-msgid "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N = 0, 1 - otherwise"
-msgstr "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N = 0, 1 - otherwise"
+msgid "Difference between item timestamp value and BKM server timestamp is over T seconds, then N = 0, 1 - otherwise"
+msgstr "Difference between item timestamp value and BKM server timestamp is over T seconds, then N = 0, 1 - otherwise"
 
 #: popup_trexpr.php:485
-msgid "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N NOT 0, 1 - otherwise"
-msgstr "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N NOT 0, 1 - otherwise"
+msgid "Difference between item timestamp value and BKM server timestamp is over T seconds, then N NOT 0, 1 - otherwise"
+msgstr "Difference between item timestamp value and BKM server timestamp is over T seconds, then N NOT 0, 1 - otherwise"
 
 #: popup_trexpr.php:278
 msgid "Difference between last and preceding values, then N = 1, 0 - otherwise"
@@ -5227,8 +5227,8 @@ msgstr "空参数"
 
 #: include/classes/server/CZabbixServer.php:258
 #, c-format
-msgid "Empty response received from Zabbix server \"%1$s\"."
-msgstr "空的回应收到来自于 Zabbix 服务器 \"%1$s\"."
+msgid "Empty response received from BKM server \"%1$s\"."
+msgstr "空的回应收到来自于 BKM 服务器 \"%1$s\"."
 
 #: include/classes/api/services/CScreen.php:1025
 msgid "Empty screen ID for screen."
@@ -5703,8 +5703,8 @@ msgid "Failures"
 msgstr "失败"
 
 #: app/views/system.warning.php:21 app/views/system.warning.php:33
-msgid "Fatal error, please report to the Zabbix team"
-msgstr "呦吼~中奖了。你发现了一个致命的zabbix错误。来我们的社区把问题跟我们说下吧。我们很乐意帮你解决。"
+msgid "Fatal error, please report to the BKM team"
+msgstr "呦吼~中奖了。你发现了一个致命的BKM错误。来我们的社区把问题跟我们说下吧。我们很乐意帮你解决。"
 
 #: app/views/monitoring.dashboard.view.php:35 jsLoader.php:187
 msgid "Favourite graphs"
@@ -7986,8 +7986,8 @@ msgstr "提供了不正确的资源类型给聚合图形项目."
 
 #: include/classes/server/CZabbixServer.php:265
 #, c-format
-msgid "Incorrect response received from Zabbix server \"%1$s\"."
-msgstr "收到了来自于zabbix服务器\"%1$s\"的错误应答."
+msgid "Incorrect response received from BKM server \"%1$s\"."
+msgstr "收到了来自于BKM服务器\"%1$s\"的错误应答."
 
 #: include/classes/api/services/CHttpTest.php:742
 #, c-format
@@ -11075,8 +11075,8 @@ msgid "Number of items (enabled/disabled/not supported)"
 msgstr "监控项数量（已启用/已禁用/不支持）"
 
 #: include/classes/items/CHelpItems.php:927
-msgid "Number of items in Zabbix database."
-msgstr "Zabbix 数据库中的监控项数量"
+msgid "Number of items in BKM database."
+msgstr "BKM 数据库中的监控项数量"
 
 #: include/classes/items/CHelpItems.php:947
 msgid "Number of items in proxy history that are not yet sent to the server"
@@ -11157,12 +11157,12 @@ msgid "Number of triggers (enabled/disabled [problem/ok])"
 msgstr "触发器数量（已启用/已禁用 [问题/正常]）"
 
 #: include/classes/items/CHelpItems.php:971
-msgid "Number of triggers in Zabbix database."
-msgstr "Zabbix 数据库中的触发器数量"
+msgid "Number of triggers in BKM database."
+msgstr "BKM 数据库中的触发器数量"
 
 #: include/classes/items/CHelpItems.php:931
-msgid "Number of unsupported items in Zabbix database."
-msgstr "Zabbix 数据库中不支持的监控项数量。"
+msgid "Number of unsupported items in BKM database."
+msgstr "BKM 数据库中不支持的监控项数量。"
 
 #: include/classes/items/CHelpItems.php:911
 msgid "Number of unsupported items on the host."
@@ -11395,20 +11395,20 @@ msgid "Only Super Admins can update icon maps."
 msgstr "只有超级管理员可以更新图标映射."
 
 #: include/classes/api/services/CUser.php:689
-msgid "Only Zabbix Admins can add user media."
+msgid "Only BKM Admins can add user media."
 msgstr "只有超级管理员可以添加用户报警媒介."
 
 #: include/classes/api/services/CUser.php:867
-msgid "Only Zabbix Admins can change user media."
+msgid "Only BKM Admins can change user media."
 msgstr "只有超级管理员可以用改变户报警媒介."
 
 #: include/classes/api/services/CUser.php:948
-msgid "Only Zabbix Admins can remove user media."
+msgid "Only BKM Admins can remove user media."
 msgstr "只有超级管理员可以移除用户报警媒介."
 
 #: include/classes/api/services/CDRule.php:445
-msgid "Only Zabbix agent, SNMPv1, SNMPv2 and SNMPv3 checks can be made unique."
-msgstr "只有Zabbix代理, SNMPv1,SNMPv2 和 SNMPv3检查才是独特的."
+msgid "Only BKM agent, SNMPv1, SNMPv2 and SNMPv3 checks can be made unique."
+msgstr "只有BKM代理, SNMPv1,SNMPv2 和 SNMPv3检查才是独特的."
 
 #: include/classes/api/services/CMap.php:445
 #: include/classes/api/services/CMap.php:853
@@ -12094,8 +12094,8 @@ msgid "Please create database manually, and set the configuration parameters for
 msgstr "请手动创建数据并且完成一些必要的设置。完成后按\"%1$s\"来结束。"
 
 #: include/classes/setup/CSetupWizard.php:302
-msgid "Please enter the host name or host IP address and port number of the Zabbix server, as well as the name of the installation (optional)."
-msgstr "请输入主机名或主机IP地址和zabbix服务器的端口号，以及安装的名称（可选）。"
+msgid "Please enter the host name or host IP address and port number of the BKM server, as well as the name of the installation (optional)."
+msgstr "请输入主机名或主机IP地址和BKM服务器的端口号，以及安装的名称（可选）。"
 
 #: jsLoader.php:147
 msgid "Please select two elements"
@@ -12749,8 +12749,8 @@ msgid "Required performance (vps)"
 msgstr "要求的性能(vps)"
 
 #: include/classes/items/CHelpItems.php:959
-msgid "Required performance of the Zabbix server, in new values per second expected."
-msgstr "Zabbix服务器所需求的性能,每秒钟处理的新值数."
+msgid "Required performance of the BKM server, in new values per second expected."
+msgstr "BKM服务器所需求的性能,每秒钟处理的新值数."
 
 #: include/blocks.inc.php:503
 msgid "Required server performance, new values per second"
@@ -12884,8 +12884,8 @@ msgid "Returns current maintenance status of the host."
 msgstr "返回主机当前的维护状态."
 
 #: include/classes/items/CHelpItems.php:935
-msgid "Returns information associated with Zabbix Java gateway. Valid params are: ping, version."
-msgstr "返回与Zabbix Java应用网关相关联的信息。可用的参数有：ping,version."
+msgid "Returns information associated with BKM Java gateway. Valid params are: ping, version."
+msgstr "返回与BKM Java应用网关相关联的信息。可用的参数有：ping,version."
 
 #: include/classes/items/CHelpItems.php:643
 msgid "Returns percentage of lost ICMP ping packets."
@@ -12944,12 +12944,12 @@ msgid "Run commands"
 msgstr "执行命令"
 
 #: include/actions.inc.php:895
-msgid "Run custom commands on Zabbix agent"
-msgstr "在Zabbix客户端上执行自定义命令"
+msgid "Run custom commands on BKM agent"
+msgstr "在BKM客户端上执行自定义命令"
 
 #: include/actions.inc.php:900
-msgid "Run custom commands on Zabbix server"
-msgstr "在Zabbix服务端上执行自定义命令"
+msgid "Run custom commands on BKM server"
+msgstr "在BKM服务端上执行自定义命令"
 
 #: include/actions.inc.php:910
 msgid "Run global script"
@@ -13768,8 +13768,8 @@ msgid "Show value"
 msgstr "查看值"
 
 #: adm.gui.php:53 include/views/administration.general.gui.edit.php:59
-msgid "Show warning if Zabbix server is down"
-msgstr "当Zabbix服务器停机时显示警告"
+msgid "Show warning if BKM server is down"
+msgstr "当BKM服务器停机时显示警告"
 
 #: include/views/configuration.graph.edit.php:97
 msgid "Show working time"
@@ -13846,8 +13846,8 @@ msgstr "场所州/省"
 
 #: include/classes/server/CZabbixServer.php:239
 #, c-format
-msgid "Size of the response received from Zabbix server \"%1$s\" exceeds the allowed size of %2$s bytes. This value can be increased in the ZBX_SOCKET_BYTES_LIMIT constant in include/defines.inc.php."
-msgstr "Zabbix服务器\"%1$s\" 收到响应的大小字节超过允许的大小%2$s 。这个值通过在Zinclude / defines.inc.php文件中定义的ZBX_SOCKET_BYTES_LIMIT 变量来增加."
+msgid "Size of the response received from BKM server \"%1$s\" exceeds the allowed size of %2$s bytes. This value can be increased in the ZBX_SOCKET_BYTES_LIMIT constant in include/defines.inc.php."
+msgstr "BKM服务器\"%1$s\" 收到响应的大小字节超过允许的大小%2$s 。这个值通过在Zinclude / defines.inc.php文件中定义的ZBX_SOCKET_BYTES_LIMIT 变量来增加."
 
 #: include/graphs.inc.php:362
 #, c-format
@@ -14013,8 +14013,8 @@ msgid "Start in"
 msgstr "开始于"
 
 #: include/classes/items/CHelpItems.php:883
-msgid "Startup time of Zabbix server, Unix timestamp."
-msgstr "Zabbix服务器的启动时间，Unix时间截."
+msgid "Startup time of BKM server, Unix timestamp."
+msgstr "BKM服务器的启动时间，Unix时间截."
 
 #: include/forms.inc.php:369 include/forms.inc.php:789
 #: include/views/configuration.maintenance.list.php:39
@@ -14084,8 +14084,8 @@ msgstr "状态码"
 #: app/views/report.status.php:25
 #: include/classes/screens/CScreenServerInfo.php:81 include/menu.inc.php:152
 #: include/screens.inc.php:37
-msgid "Status of Zabbix"
-msgstr "Zabbix状态"
+msgid "Status of BKM"
+msgstr "BKM状态"
 
 #: app/controllers/CControllerDiscoveryView.php:89
 #: app/views/monitoring.discovery.view.php:26
@@ -14563,13 +14563,13 @@ msgstr "该应用程序不再被发现，并在下一次发现规则处理时删
 #: include/classes/db/OracleDbBackend.php:36
 #: include/classes/db/PostgresqlDbBackend.php:44
 #: include/classes/db/SqliteDbBackend.php:34
-msgid "The frontend does not match Zabbix database."
-msgstr "前端不匹配Zabbix数据库."
+msgid "The frontend does not match BKM database."
+msgstr "前端不匹配BKM数据库."
 
 #: include/classes/db/DbBackend.php:48
 #, c-format
-msgid "The frontend does not match Zabbix database. Current database version (mandatory/optional): %d/%d. Required mandatory version: %d. Contact your system administrator."
-msgstr "前端不匹配Zabbix数据库.当前数据库版本(强制/可选):%d/%d. 需要的版本为: %d.  联系你的系统管理员."
+msgid "The frontend does not match BKM database. Current database version (mandatory/optional): %d/%d. Required mandatory version: %d. Contact your system administrator."
+msgstr "前端不匹配BKM数据库.当前数据库版本(强制/可选):%d/%d. 需要的版本为: %d.  联系你的系统管理员."
 
 #: include/html.inc.php:633
 #, c-format
@@ -14715,8 +14715,8 @@ msgid "Time (descending)"
 msgstr "时间(降序)"
 
 #: include/classes/items/CHelpItems.php:939
-msgid "Time a particular Zabbix process or a group of processes (identified by <type> and <num>) spent in <state> in percentage."
-msgstr "处在 <state> 状态下的某个或一组zabbix进程（由 <type> 和 <num> 指定）的百分比时间。"
+msgid "Time a particular BKM process or a group of processes (identified by <type> and <num>) spent in <state> in percentage."
+msgstr "处在 <state> 状态下的某个或一组BKM进程（由 <type> 和 <num> 指定）的百分比时间。"
 
 #: include/classes/items/CHelpItems.php:943
 msgid "Time of proxy last access. Name - proxy name. Param - lastaccess. Unix timestamp."
@@ -15679,8 +15679,8 @@ msgid "Uptime"
 msgstr "在线时间"
 
 #: include/classes/items/CHelpItems.php:975
-msgid "Uptime of Zabbix server process in seconds."
-msgstr "Zabbix服务器进程的在线时间单位秒."
+msgid "Uptime of BKM server process in seconds."
+msgstr "BKM服务器进程的在线时间单位秒."
 
 #: include/actions.inc.php:55
 msgid "Uptime/Downtime"
@@ -16303,8 +16303,8 @@ msgstr "冗余"
 
 #: include/classes/items/CHelpItems.php:73
 #: include/classes/items/CHelpItems.php:347
-msgid "Version of Zabbix agent. Returns string"
-msgstr "zabbix客户端（agent）的版本。返回字符串"
+msgid "Version of BKM agent. Returns string"
+msgstr "BKM客户端（agent）的版本。返回字符串"
 
 #: include/views/monitoring.screen.constructor.edit.php:651
 msgid "Vertical"
@@ -16791,27 +16791,27 @@ msgid "You must login to view this page."
 msgstr "您必需登录才能浏览此页面."
 
 #: index.php:25
-msgid "ZABBIX"
-msgstr "Zabbix"
+msgid "BKM"
+msgstr "BKM"
 
 #: include/page_header.php:115
-msgid "Zabbix"
-msgstr "Zabbix"
+msgid "BKM"
+msgstr "BKM"
 
 #: include/users.inc.php:55
-msgid "Zabbix Admin"
+msgid "BKM Admin"
 msgstr "管理员"
 
 #: app/views/layout.htmlpage.menu.php:36
-msgid "Zabbix Share"
-msgstr "zabbix 共享"
+msgid "BKM Share"
+msgstr "BKM 共享"
 
 #: include/users.inc.php:56
-msgid "Zabbix Super Admin"
+msgid "BKM Super Admin"
 msgstr "超级管理员"
 
 #: include/users.inc.php:54
-msgid "Zabbix User"
+msgid "BKM User"
 msgstr "用户"
 
 #: app/views/administration.script.edit.php:48 include/discovery.inc.php:56
@@ -16819,27 +16819,27 @@ msgstr "用户"
 #: include/views/configuration.action.edit.php:1569
 #: include/views/js/configuration.discovery.edit.js.php:181
 msgid "Zabbix agent"
-msgstr "Zabbix 客户端"
+msgstr "BKM 客户端"
 
 #: include/items.inc.php:86
-msgid "Zabbix agent (active)"
-msgstr "Zabbix客户端(主动式)"
+msgid "BKM agent (active)"
+msgstr "BKM客户端(主动式)"
 
 #: include/items.inc.php:94
-msgid "Zabbix aggregate"
-msgstr "Zabbix整合"
+msgid "BKM aggregate"
+msgstr "BKM整合"
 
 #: include/validate.inc.php:335
-msgid "Zabbix has received an incorrect request."
-msgstr "Zabbix已接收到一个错误的请求."
+msgid "BKM has received an incorrect request."
+msgstr "BKM已接收到一个错误的请求."
 
 #: include/items.inc.php:92
-msgid "Zabbix internal"
-msgstr "Zabbix内部"
+msgid "BKM internal"
+msgstr "BKM内部"
 
 #: include/perm.inc.php:48
-msgid "Zabbix internal authentication"
-msgstr "Zabbix内部认证"
+msgid "BKM internal authentication"
+msgstr "BKM内部认证"
 
 #: app/views/administration.script.edit.php:49
 #: include/classes/screens/CScreenServerInfo.php:40
@@ -16847,52 +16847,52 @@ msgstr "Zabbix内部认证"
 #: include/views/configuration.action.edit.php:858
 #: include/views/configuration.action.edit.php:1570
 msgid "Zabbix server"
-msgstr "zabbix服务器"
+msgstr "BKM服务器"
 
 #: include/classes/server/CZabbixServer.php:304
 #, c-format
 msgid ""
-"Zabbix server \"%s\" can not be reached. Possible reasons:\n"
-"1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"BKM server \"%s\" can not be reached. Possible reasons:\n"
+"1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n"
 "2. Incorrect network configuration.\n"
 msgstr ""
-"无法连到Zabbix服务器\"%s\". 可能的原因是:\n"
-"1.  \"zabbix.conf.php\"中错误的IP/DNS;\n"
+"无法连到BKM服务器\"%s\". 可能的原因是:\n"
+"1.  \"BKM.conf.php\"中错误的IP/DNS;\n"
 "2. 错误的网络配置.\n"
 
 #: include/blocks.inc.php:473
-msgid "Zabbix server IP or port is not set!"
-msgstr "Zabbix主机IP或端口并未设置！"
+msgid "BKM server IP or port is not set!"
+msgstr "BKM主机IP或端口并未设置！"
 
 #: include/classes/setup/CSetupWizard.php:45
 #: include/classes/setup/CSetupWizard.php:300
-msgid "Zabbix server details"
-msgstr "zabbix 服务器 详细信息"
+msgid "BKM server details"
+msgstr "BKM 服务器 详细信息"
 
 #: jsrpc.php:180
-msgid "Zabbix server is not running: the information displayed may not be current."
-msgstr "Zabbix server is not running: the information displayed may not be current."
+msgid "BKM server is not running: the information displayed may not be current."
+msgstr "BKM server is not running: the information displayed may not be current."
 
 #: include/blocks.inc.php:471
-msgid "Zabbix server is running"
-msgstr "Zabbix服务器端运行中"
+msgid "BKM server is running"
+msgstr "BKM服务器端运行中"
 
 #: include/profiles.inc.php:180
 #, c-format
-msgid "Zabbix server is running check interval \"%1$s\"."
-msgstr "Zabbix主机正运行检查间隔\"%1$s\"."
+msgid "BKM server is running check interval \"%1$s\"."
+msgstr "BKM主机正运行检查间隔\"%1$s\"."
 
 #: include/classes/setup/CSetupWizard.php:338
-msgid "Zabbix server name"
-msgstr "Zabbix主机名称"
+msgid "BKM server name"
+msgstr "BKM主机名称"
 
 #: include/classes/setup/CSetupWizard.php:337
-msgid "Zabbix server port"
-msgstr "Zabbix主机端口"
+msgid "BKM server port"
+msgstr "BKM主机端口"
 
 #: include/items.inc.php:93
-msgid "Zabbix trapper"
-msgstr "Zabbix采集器"
+msgid "BKM trapper"
+msgstr "BKM采集器"
 
 #: jsLoader.php:93
 msgid "Zoom"

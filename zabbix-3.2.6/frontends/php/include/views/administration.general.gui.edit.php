@@ -56,7 +56,7 @@ $guiTab = (new CFormList())
 	->addRow(_('Max count of events per trigger to show'),
 		(new CTextBox('event_show_max', $data['event_show_max']))->setWidth(ZBX_TEXTAREA_TINY_WIDTH)
 	)
-	->addRow(_('Show warning if Zabbix server is down'),
+	->addRow(_('Show warning if BKM server is down'),
 		(new CCheckBox('server_check_interval', SERVER_CHECK_INTERVAL))
 			->setChecked($data['server_check_interval'] == SERVER_CHECK_INTERVAL)
 	);

@@ -112,7 +112,7 @@ switch ($page['type']) {
 		if (isset($ZBX_SERVER_NAME) && $ZBX_SERVER_NAME !== '') {
 			$pageTitle = $ZBX_SERVER_NAME.NAME_DELIMITER;
 		}
-		$pageTitle .= isset($page['title']) ? $page['title'] : _('Zabbix');
+		$pageTitle .= isset($page['title']) ? $page['title'] : _('BKM');
 
 		if ((defined('ZBX_PAGE_DO_REFRESH') || defined('ZBX_PAGE_DO_JS_REFRESH')) && CWebUser::$data['refresh']) {
 			$pageTitle .= ' ['._s('refreshed every %1$s sec.', CWebUser::$data['refresh']).']';

@@ -468,9 +468,9 @@ function make_status_of_zbx() {
 	$status = get_status();
 
 	$table->addRow([
-		_('Zabbix server is running'),
+		_('BKM server is running'),
 		(new CSpan($status['zabbix_server']))->addClass($status['zabbix_server'] == _('Yes') ? ZBX_STYLE_GREEN : ZBX_STYLE_RED),
-		isset($ZBX_SERVER, $ZBX_SERVER_PORT) ? $ZBX_SERVER.':'.$ZBX_SERVER_PORT : _('Zabbix server IP or port is not set!')
+		isset($ZBX_SERVER, $ZBX_SERVER_PORT) ? $ZBX_SERVER.':'.$ZBX_SERVER_PORT : _('BKM server IP or port is not set!')
 	]);
 	$title = (new CSpan(_('Number of hosts (enabled/disabled/templates)')))->setAttribute('title', 'asdad');
 	$table->addRow([_('Number of hosts (enabled/disabled/templates)'), $status['hosts_count'],

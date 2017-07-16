@@ -332,7 +332,7 @@ function check_field(&$fields, &$field, $checks) {
 
 function invalid_url($msg = null) {
 	if (empty($msg)) {
-		$msg = _('Zabbix has received an incorrect request.');
+		$msg = _('BKM has received an incorrect request.');
 	}
 
 	// required global parameters for correct including page_header.php

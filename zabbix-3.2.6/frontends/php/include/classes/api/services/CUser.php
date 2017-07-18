@@ -686,7 +686,7 @@ class CUser extends CApiService {
 	 */
 	protected function validateAddMedia(array $data) {
 		if (self::$userData['type'] < USER_TYPE_ZABBIX_ADMIN) {
-			self::exception(ZBX_API_ERROR_PARAMETERS, _('Only Zabbix Admins can add user media.'));
+			self::exception(ZBX_API_ERROR_PARAMETERS, _('Only BKM Admins can add user media.'));
 		}
 
 		if (!isset($data['users']) || !isset($data['medias'])) {
@@ -864,7 +864,7 @@ class CUser extends CApiService {
 	 */
 	protected function validateUpdateMedia(array $data) {
 		if (self::$userData['type'] < USER_TYPE_ZABBIX_ADMIN) {
-			self::exception(ZBX_API_ERROR_PERMISSIONS, _('Only Zabbix Admins can change user media.'));
+			self::exception(ZBX_API_ERROR_PERMISSIONS, _('Only BKM Admins can change user media.'));
 		}
 
 		if (!isset($data['users']) || !isset($data['medias'])) {
@@ -945,7 +945,7 @@ class CUser extends CApiService {
 	 */
 	protected function validateDeleteMedia(array $mediaIds) {
 		if (self::$userData['type'] < USER_TYPE_ZABBIX_ADMIN) {
-			self::exception(ZBX_API_ERROR_PARAMETERS, _('Only Zabbix Admins can remove user media.'));
+			self::exception(ZBX_API_ERROR_PARAMETERS, _('Only BKM Admins can remove user media.'));
 		}
 
 		$dbUserMediaCount = API::UserMedia()->get([
@@ -1394,7 +1394,7 @@ class CUser extends CApiService {
 
 		if (in_array($guest['userid'], $userIds)) {
 			self::exception(ZBX_API_ERROR_PARAMETERS,
-				_s('Cannot delete Zabbix internal user "%1$s", try disabling that user.', ZBX_GUEST_USER)
+				_s('Cannot delete BKM internal user "%1$s", try disabling that user.', ZBX_GUEST_USER)
 			);
 		}
 	}

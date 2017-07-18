@@ -215,7 +215,7 @@ class CZabbixServer {
 
 		// send the command
 		if (fwrite($this->socket, CJs::encodeJson($params)) === false) {
-			$this->error = _s('Cannot send command, check connection with Zabbix server "%1$s".', $this->host);
+			$this->error = _s('Cannot send command, check connection with BKM server "%1$s".', $this->host);
 
 			return false;
 		}
@@ -231,12 +231,12 @@ class CZabbixServer {
 		while (!feof($this->socket)) {
 			$i++;
 			if ((time() - $now) >= $this->timeout) {
-				$this->error = _s('Connection timeout of %1$s seconds exceeded when connecting to Zabbix server "%2$s".', $this->timeout, $this->host);
+				$this->error = _s('Connection timeout of %1$s seconds exceeded when connecting to BKM server "%2$s".', $this->timeout, $this->host);
 
 				return false;
 			}
 			elseif ($this->totalBytesLimit && ($i * $readBytesLimit) >= $this->totalBytesLimit) {
-				$this->error = _s('Size of the response received from Zabbix server "%1$s" exceeds the allowed size of %2$s bytes. This value can be increased in the ZBX_SOCKET_BYTES_LIMIT constant in include/defines.inc.php.', $this->host, $this->totalBytesLimit);
+				$this->error = _s('Size of the response received from BKM server "%1$s" exceeds the allowed size of %2$s bytes. This value can be increased in the ZBX_SOCKET_BYTES_LIMIT constant in include/defines.inc.php.', $this->host, $this->totalBytesLimit);
 
 				return false;
 			}
@@ -245,7 +245,7 @@ class CZabbixServer {
 				$response .= $out;
 			}
 			else {
-				$this->error = _s('Cannot read the response, check connection with the Zabbix server "%1$s".', $this->host);
+				$this->error = _s('Cannot read the response, check connection with the BKM server "%1$s".', $this->host);
 
 				return false;
 			}
@@ -255,14 +255,14 @@ class CZabbixServer {
 
 		// check if the response is empty
 		if (!strlen($response)) {
-			$this->error = _s('Empty response received from Zabbix server "%1$s".', $this->host);
+			$this->error = _s('Empty response received from BKM server "%1$s".', $this->host);
 
 			return false;
 		}
 
 		$response = CJs::decodeJson($response);
 		if (!$response || !$this->validateResponse($response)) {
-			$this->error = _s('Incorrect response received from Zabbix server "%1$s".', $this->host);
+			$this->error = _s('Incorrect response received from BKM server "%1$s".', $this->host);
 
 			return false;
 		}
@@ -297,19 +297,19 @@ class CZabbixServer {
 			if (!$socket = @fsockopen($this->host, $this->port, $errorCode, $errorMsg, $this->timeout)) {
 				switch ($errorMsg) {
 					case 'Connection refused':
-						$dErrorMsg = _s("Connection to Zabbix server \"%s\" refused. Possible reasons:\n1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n2. Security environment (for example, SELinux) is blocking the connection;\n3. Zabbix server daemon not running;\n4. Firewall is blocking TCP connection.\n", $this->host);
+						$dErrorMsg = _s("Connection to BKM server \"%s\" refused. Possible reasons:\n1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n2. Security environment (for example, SELinux) is blocking the connection;\n3. BKM server daemon not running;\n4. Firewall is blocking TCP connection.\n", $this->host);
 						break;
 
 					case 'No route to host':
-						$dErrorMsg = _s("Zabbix server \"%s\" can not be reached. Possible reasons:\n1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n2. Incorrect network configuration.\n", $this->host);
+						$dErrorMsg = _s("BKM server \"%s\" can not be reached. Possible reasons:\n1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n2. Incorrect network configuration.\n", $this->host);
 						break;
 
 					case 'Connection timed out':
-						$dErrorMsg = _s("Connection to Zabbix server \"%s\" timed out. Possible reasons:\n1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n2. Firewall is blocking TCP connection.\n", $this->host);
+						$dErrorMsg = _s("Connection to BKM server \"%s\" timed out. Possible reasons:\n1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n2. Firewall is blocking TCP connection.\n", $this->host);
 						break;
 
 					default:
-						$dErrorMsg = _s("Connection to Zabbix server \"%s\" failed. Possible reasons:\n1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n2. Incorrect DNS server configuration.\n", $this->host);
+						$dErrorMsg = _s("Connection to BKM server \"%s\" failed. Possible reasons:\n1. Incorrect server IP/DNS in the \"BKM.conf.php\";\n2. Incorrect DNS server configuration.\n", $this->host);
 				}
 
 				$this->error = $dErrorMsg.$errorMsg;

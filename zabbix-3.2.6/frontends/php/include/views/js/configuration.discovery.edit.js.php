@@ -600,7 +600,7 @@
 					overlayDialogue({
 						'title': '<?= _('Discovery check error') ?>',
 						'content': jQuery('<span>').text(<?= CJs::encodeJson(
-							_('Cannot validate discovery check: invalid request or connection to Zabbix server failed.')
+							_('Cannot validate discovery check: invalid request or connection to BKM server failed.')
 						) ?>),
 						'buttons': [
 							{

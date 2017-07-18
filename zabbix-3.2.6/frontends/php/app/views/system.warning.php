@@ -30,7 +30,7 @@ $buttons = [
 echo '<body>';
 
 (new CDiv(
-	new CWarning(_('Fatal error, please report to the Zabbix team'), $data['messages'], $buttons), ZBX_STYLE_ARTICLE
+	new CWarning(_('Fatal error, please report to the BKM team'), $data['messages'], $buttons), ZBX_STYLE_ARTICLE
 ))->show();
 
 echo '</body>';

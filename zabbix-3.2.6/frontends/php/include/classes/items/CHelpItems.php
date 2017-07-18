@@ -630,7 +630,7 @@ class CHelpItems {
 			ITEM_TYPE_AGGREGATE => [
 				[
 					'key' => 'grpfunc[group,key,func,<param>]',
-					'description' => _('Aggregate checks do not require any agent running on a host being monitored. Zabbix server collects aggregate information by doing direct database queries. See Zabbix Manual.')
+					'description' => _('Aggregate checks do not require any agent running on a host being monitored. BKM server collects aggregate information by doing direct database queries. See BKM Manual.')
 				]
 			],
 			ITEM_TYPE_SIMPLE => [
@@ -880,7 +880,7 @@ class CHelpItems {
 			ITEM_TYPE_INTERNAL => [
 				[
 					'key' => 'zabbix[boottime]',
-					'description' => _('Startup time of Zabbix server, Unix timestamp.')
+					'description' => _('Startup time of BKM server, Unix timestamp.')
 				],
 				[
 					'key' => 'zabbix[history]',
@@ -924,15 +924,15 @@ class CHelpItems {
 				],
 				[
 					'key' => 'zabbix[items]',
-					'description' => _('Number of items in Zabbix database.')
+					'description' => _('Number of items in BKM database.')
 				],
 				[
 					'key' => 'zabbix[items_unsupported]',
-					'description' => _('Number of unsupported items in Zabbix database.')
+					'description' => _('Number of unsupported items in BKM database.')
 				],
 				[
 					'key' => 'zabbix[java,,<param>]',
-					'description' => _('Returns information associated with Zabbix Java gateway. Valid params are: ping, version.')
+					'description' => _('Returns information associated with BKM Java gateway. Valid params are: ping, version.')
 				],
 				[
 					'key' => 'zabbix[process,<type>,<num>,<state>]',
@@ -956,7 +956,7 @@ class CHelpItems {
 				],
 				[
 					'key' => 'zabbix[requiredperformance]',
-					'description' => _('Required performance of the Zabbix server, in new values per second expected.')
+					'description' => _('Required performance of the BKM server, in new values per second expected.')
 				],
 				[
 					'key' => 'zabbix[trends]',
@@ -968,7 +968,7 @@ class CHelpItems {
 				],
 				[
 					'key' => 'zabbix[triggers]',
-					'description' => _('Number of triggers in Zabbix database.')
+					'description' => _('Number of triggers in BKM database.')
 				],
 				[
 					'key' => 'zabbix[uptime]',

@@ -892,12 +892,12 @@ function getActionOperationHints(array $operations, array $defaultMessage) {
 
 					case ZBX_SCRIPT_TYPE_CUSTOM_SCRIPT:
 						if ($operation['opcommand']['execute_on'] == ZBX_SCRIPT_EXECUTE_ON_AGENT) {
-							$result[$key][] = [bold(_('Run custom commands on Zabbix agent').': '), BR(),
+							$result[$key][] = [bold(_('Run custom commands on BKM agent').': '), BR(),
 								italic(zbx_nl2br($operation['opcommand']['command']))
 							];
 						}
 						else {
-							$result[$key][] = [bold(_('Run custom commands on Zabbix server').': '), BR(),
+							$result[$key][] = [bold(_('Run custom commands on BKM server').': '), BR(),
 								italic(zbx_nl2br($operation['opcommand']['command']))
 							];
 						}

@@ -24,3 +24,7 @@
 #### 2017.7.16
 >* 肖第二次提交
 >   * 修改了images.sql的第182到187条记录，将存储的图片换为了Bankingmon的logo
+#### 2017.7.11
+>* 修改翻译文件
+>* 朱提交
+>   * 将./zabbix-3.2.6\frontends\php\locale\zh_CN\LC_MESSAGES\frontend.po 中的Zabbix字样修改为BGM

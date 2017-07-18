@@ -177,7 +177,7 @@ function update_config($config) {
 			$msg[] = _s('Max count of elements to show inside table cell "%1$s".', $config['max_in_table']);
 		}
 		if (array_key_exists('server_check_interval', $config)) {
-			$msg[] = _s('Zabbix server is running check interval "%1$s".', $config['server_check_interval']);
+			$msg[] = _s('BKM server is running check interval "%1$s".', $config['server_check_interval']);
 		}
 		if (array_key_exists('refresh_unsupported', $config)) {
 			$msg[] = _s('Refresh unsupported items (in sec) "%1$s".', $config['refresh_unsupported']);

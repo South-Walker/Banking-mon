@@ -45,7 +45,7 @@ function permission2str($permission) {
  */
 function authentication2str($type) {
 	$authentications = [
-		ZBX_AUTH_INTERNAL => _('Zabbix internal authentication'),
+		ZBX_AUTH_INTERNAL => _('BKM internal authentication'),
 		ZBX_AUTH_LDAP => _('LDAP authentication'),
 		ZBX_AUTH_HTTP => _('HTTP authentication')
 	];

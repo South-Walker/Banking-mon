@@ -22,7 +22,7 @@
 function audit_resource2str($resource_type = null) {
 	$resources = [
 		AUDIT_RESOURCE_USER => _('User'),
-		AUDIT_RESOURCE_ZABBIX_CONFIG => _('Configuration of Zabbix'),
+		AUDIT_RESOURCE_ZABBIX_CONFIG => _('Configuration of BKM'),
 		AUDIT_RESOURCE_MEDIA_TYPE => _('Media type'),
 		AUDIT_RESOURCE_HOST => _('Host'),
 		AUDIT_RESOURCE_ACTION => _('Action'),

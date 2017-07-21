@@ -33,6 +33,11 @@ mv ./share/man/man8/zabbix_agentd.8 ./share/man/man8/bankingmon_sender.8
 sed -i 's/Zabbix/Bankingmon/g' ./etc/bankingmon_agentd.conf
 sed -i 's/zabbix/bankingmon/g' ./etc/bankingmon_agentd.conf
 sed -i '11aPidFile=/tmp/bankingmon_agentd.pid' ./etc/bankingmon_agentd.conf
+sed -i '^# User=zabbix$/User=bankingmon/' ./etc/bankingmon_agentd.conf
+sed -i '^# ListenPort=10050$/ListenPort=9610/' ./etc/bankingmon_agentd.conf
+sed -i 's/ZABBIX/BANKINGMON/g' ./share/man/man1/bankingmon_get.1 ./share/man/man1/bankingmon_sender.1 ./share/man/man8/bankingmon_sender.8
+sed -i 's/Zabbix/Bankingmon/g' ./share/man/man1/bankingmon_get.1 ./share/man/man1/bankingmon_sender.1 ./share/man/man8/bankingmon_sender.8
+sed -i 's/zabbix/bankingmon/g' ./share/man/man1/bankingmon_get.1 ./share/man/man1/bankingmon_sender.1 ./share/man/man8/bankingmon_sender.8
 
 ##third rm $0
 echo "install success"

@@ -28,3 +28,8 @@
 >* 修改翻译文件
 >* 朱提交
 >   * 将./zabbix-3.2.6\frontends\php\locale\zh_CN\LC_MESSAGES\frontend.po 中的Zabbix字样修改为BGM
+
+#### 2017.7.20
+>* 前端小修改
+>* 朱提交
+>   * 将./zabbix-3.2.6\frontends\php\locale\zh_CN\LC_MESSAGES\frontend.po 中的Zabbix字样修改为BGM

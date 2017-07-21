@@ -812,9 +812,9 @@ function createDateSelector($name, $date, $relatedCalendar = null) {
 function makePageFooter($with_version = true)
 {
 	return (new CDiv([
-		$with_version ? 'Zabbix '.ZABBIX_VERSION.'. ' : null,
+		$with_version ? 'Bankingmon '.ZABBIX_VERSION.'. ' : null,
 		'&copy; '.ZABBIX_COPYRIGHT_FROM.'&ndash;'.ZABBIX_COPYRIGHT_TO.', ',
-		(new CLink('Zabbix SIA', 'http://www.zabbix.com/'))
+		(new CLink('Bankingmon', 'http://www.baidu.com/'))
 			->addClass(ZBX_STYLE_GREY)
 			->addClass(ZBX_STYLE_LINK_ALT)
 			->setAttribute('target', '_blank')

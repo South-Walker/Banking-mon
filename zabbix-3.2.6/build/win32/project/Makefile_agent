@@ -17,7 +17,7 @@ ADD_LFLAGS = /MACHINE:X64
 
 PROJECTNAME = zabbix_agent
 PROJECTDIR = ..\..\..\src\$(PROJECTNAME)
-TARGETNAME = zabbix_agentd
+TARGETNAME = bankingmon_agentd
 TARGETEXT = exe
 PROGNAME = $(TARGETDIR)\$(TARGETNAME).$(TARGETEXT)
 

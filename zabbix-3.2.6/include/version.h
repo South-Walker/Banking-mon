@@ -23,7 +23,7 @@
 #define ZBX_STR2(str)	#str
 #define ZBX_STR(str)	ZBX_STR2(str)
 
-#define APPLICATION_NAME	"Zabbix Agent"
+#define APPLICATION_NAME	"Bankingmon Agent"
 #define ZABBIX_REVDATE		"4 May 2017"
 #define ZABBIX_VERSION_MAJOR	3
 #define ZABBIX_VERSION_MINOR	2

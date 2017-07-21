@@ -24,6 +24,13 @@
 #### 2017.7.16
 >* 肖第二次提交
 >   * 修改了images.sql的第182到187条记录，将存储的图片换为了Bankingmon的logo
+
+#### 2017.7.21
+>* 肖第三次提交
+>   * 修改了zabbix-3.2.6\include\version.h头文件第26行#define APPLICATION_NAME	"Bankingmon Agent",使得在windows平台下编译后对应的服务名由Zabbix Agent变为Bankingmon Agent
+>   * 修改了zabbix-3.2.6\conf\zabbix_agentd.win.conf配置文件第23行LogFile属性的值，修改为了c:\bankingmon_agentd.log，使得windows平台下日志存储在c:\bankingmon_agentd.log中
+>   * 修改了zabbix-3.2.6\build\win32\project\zabbix_agent_desc.h头文件第四行#define VER_FILEDESCRIPTION_STR		"bankingmon_agentd.exe"，与zabbix-3.2.6\build\win32\project\Makefile_agent第20行TARGETNAME属性的值为bankingmon_agentd，使得编译后生成的守护进程名修改为bankingmon_agentd，对应的文件修改为bankingmon_agentd.exe
+
 #### 2017.7.11
 >* 修改翻译文件
 >* 朱提交

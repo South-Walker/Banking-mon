@@ -1,0 +1,277 @@
+./include/page_header.php 111行 修改为 $pageTitle = 'Banking_mon';
+./include/page_header.php 115行 修改为 $pageTitle .= isset($page['title']) ? $page['title'] : _('Banking_mon'); 
+./include/html.inc.php 815行 修改为 $with_version ? 'Bankingmon'.ZABBIX_VERSION.'. ' : null,
+./include/html.inc.php 817行 修改为 (new CLink('BankingMon', ''))
+./app/views/layout.htmlpage.menu.php 33行 修改为 (new CLink('Share', ''))
+./app/views/layout.htmlpage.menu.php 36行 修改为 ->setAttribute('title', _('Bankingmon Share'))
+./app/views/layout.htmlpage.menu.php 39行 修改为 (new CLink(SPACE, ''))
+./include/defines.inc.php 720行 修改为 define('ZBX_DEFAULT_AGENT', 'Bankingmon');
+./include/defines.inc.php 1080行 修改为 define('ZABBIX_HOMEPAGE', '');
+./include/views/general.browserwarning.php 74行 修改为 &copy; <?= ZABBIX_COPYRIGHT_FROM ?>&ndash;<?= ZABBIX_COPYRIGHT_TO ?>, <a class="<?= ZBX_STYLE_GREY ?> <?= ZBX_STYLE_LINK_ALT ?>" target="_blank" href="">Banking_Mon</a>
+./include/views/general.login.php 67行 修改为 (new CLink(_('Help'), ''))
+./include/views/general.login.php 72行 修改为 (new CLink(_('Support'), ''))
+./setup.php 110行 修改为 $link = (new CLink('GPL v2', ''))
+./include/classes/setup/CSetupWizard.php 154行 修改为 ./$setup_title = (new CDiv([new CSpan(_('Welcome to')), 'Bankingmon '.$version[0]]))->addClass(ZBX_STYLE_SETUP_TITLE);
+./include/classes/setup/CSetupWizard.php 45行 修改为 'title' => _('Bankingmon server details'),
+./include/classes/setup/CSetupWizard.php 300行 修改为 new CTag('h1', true, _('Bankingmon server details')),
+./include/classes/setup/CSetupWizard.php 302行 修改为 new CTag('p', true, _('Please enter the host name or host IP address and port number of the Bankingmon server, as well as the name of the installation (optional).')),
+./include/classes/setup/CSetupWizard.php 306行 修改为 $table->addRow((new CSpan(_('Bankingmon server')))->addClass(ZBX_STYLE_GREY), $this->getConfig('ZBX_SERVER'));
+./include/classes/setup/CSetupWizard.php 307行 修改为 $table->addRow((new CSpan(_('Bankingmon server port')))->addClass(ZBX_STYLE_GREY), $this->getConfig('ZBX_SERVER_PORT'));
+./include/classes/setup/CSetupWizard.php 308行 修改为 $table->addRow((new CSpan(_('Bankingmon server name')))->addClass(ZBX_STYLE_GREY), $this->getConfig('ZBX_SERVER_NAME'));
+./include/classes/core/CConfigFile.php 27行 修改为 const CONFIG_FILE_PATH = '/conf/bankingmon.conf.php';
+./include/classes/core/CConfigFile.php 170行 修改为 // Bankingmon GUI configuration file.
+
+
+##.po文件的源文件
+##以下全是.po文件的修改
+7:  "Project-Id-Version: Bankingmon 3.2\n"
+11: "Last-Translator: banking monitor\n"
+12: "Language-Team: Bankingmon\n"
+#: include/classes/items/CHelpItems.php:633
+659: msgid "Aggregate checks do not require any agent running on a host being monitored. Zabbix server collects aggregate information by doing direct database queries. See Zabbix Manual."
+660: msgstr "聚合检查不需要在被监控主机上运行任何代理程序。Bankingmon服务器直接通过数据库查询来收集聚合>信息。参阅Bankingmon手册。"
+#: authentication.php:90
+1016: msgid "Authentication method changed to Zabbix internal"
+#: authentication.php:91
+1488: msgid "Cannot change authentication method to Zabbix internal"
+1489: msgstr "无法变更授权方式为Zabbix内部"
+#: include/classes/api/services/CUser.php:1397
+#, c-format
+1595: msgid "Cannot delete Zabbix internal user \"%1$s\", try disabling that user."
+1596: msgstr "无法删除Zabbix内部用户 \"%1$s\", 试试停用这个用户."
+#: include/classes/server/CZabbixServer.php:248
+#, c-format
+2174: msgid "Cannot read the response, check connection with the Zabbix server \"%1$s\"."
+2175: msgstr "不能读取响应, 检查与Zabbix服务器 \"%1$s\" 的连接."
+#: include/classes/server/CZabbixServer.php:218
+#, c-format
+2192: msgid "Cannot send command, check connection with Zabbix server \"%1$s\"."
+2193: msgstr "无法发送命令, 检查于Zabbix 服务器 \"%1$s\" 的连接."
+#: include/views/js/configuration.discovery.edit.js.php:603
+2625: msgid "Cannot validate discovery check: invalid request or connection to Zabbix server failed."
+2626: msgstr "不可用的发现检查：请求不合法或连接到Zabbix服务器失败."
+#: include/audit.inc.php:25
+3041: msgid "Configuration of Zabbix"
+3042: msgstr "Zabbix的配置"
+#: include/classes/setup/CSetupWizard.php:399
+3199: msgid "Congratulations! You have successfully installed Zabbix frontend."
+3200: msgstr "恩！不错zabbix前端已经配置好了！千山万水第一步！加油，少年！"
+#: include/classes/server/CZabbixServer.php:234
+#, c-format
+3217: msgid "Connection timeout of %1$s seconds exceeded when connecting to Zabbix server \"%2$s\"."
+3218: msgstr "连接超时 %1$s 秒超出当连接Zabbix 服务器 \"%2$s\"."
+#: include/classes/server/CZabbixServer.php:312
+#, c-format
+msgid ""
+3223: "Connection to Zabbix server \"%s\" failed. Possible reasons:\n"
+3224: "1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"2. Incorrect DNS server configuration.\n"
+msgstr ""
+3227: "连接到Zabbix主机 \"%s\" 失败. 可能的原因是:\n"
+3228: "1. 错误的 IP/DNS 设于 \"zabbix.conf.php\";\n"
+"2. 错误的 DNS 主机配置.\n"
+#: include/classes/server/CZabbixServer.php:300
+#, c-format
+msgid ""
+3234: "Connection to Zabbix server \"%s\" refused. Possible reasons:\n"
+3235: "1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"2. Security environment (for example, SELinux) is blocking the connection;\n"
+3237: "3. Zabbix server daemon not running;\n"
+"4. Firewall is blocking TCP connection.\n"
+msgstr ""
+3240: "连接到Zabbix主机  \"%s\" 被拒绝. 可能的原因是:\n"
+3241: "1. 错误的 IP/DNS 设于\"zabbix.conf.php\";\n"
+"2. 安全环境 (例如, SELinux) 阻断了连接;\n"
+3243: "3. Zabbix主机的服务未运行;\n"
+"4. 防火墙阻断了TCP连接.\n"
+#: include/classes/server/CZabbixServer.php:308
+#, c-format
+msgid ""
+3249: "Connection to Zabbix server \"%s\" timed out. Possible reasons:\n"
+3250: "1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"2. Firewall is blocking TCP connection.\n"
+msgstr ""
+3253: "连接到Zabbix主机  \"%s\" 超时. 可能的原因是:\n"
+3254: "1. 错误的 IP/DNS 设于\"zabbix.conf.php\";\n"
+"2. 防火牆阻断了TCP连接.\n"
+#: popup_trexpr.php:480
+4483: msgid "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N = 0, 1 - otherwise"
+4484: msgstr "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N = 0, 1 - otherwise"
+#: popup_trexpr.php:485
+4487: msgid "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N NOT 0, 1 - otherwise"
+4488: msgstr "Difference between item timestamp value and Zabbix server timestamp is over T seconds, then N NOT 0, 1 - otherwise"
+#: include/classes/server/CZabbixServer.php:258
+#, c-format
+5230: msgid "Empty response received from Zabbix server \"%1$s\"."
+5231: msgstr "空的回应收到来自于 Zabbix 服务器 \"%1$s\"."
+#: app/views/system.warning.php:21 app/views/system.warning.php:33
+5706: msgid "Fatal error, please report to the Zabbix team"
+5707: msgstr "呦吼~中奖了。你发现了一个致命的zabbix错误。来我们的社区把问题跟我们说下吧。我们很乐意帮你解决。"
+#: include/classes/server/CZabbixServer.php:265
+#, c-format
+7989: msgid "Incorrect response received from Zabbix server \"%1$s\"."
+7990: msgstr "收到了来自于zabbix服务器\"%1$s\"的错误应答."
+#: include/classes/items/CHelpItems.php:927
+11078: msgid "Number of items in Zabbix database."
+11079: msgstr "Zabbix 数据库中的监控项数量"
+#: include/classes/items/CHelpItems.php:971
+11160: msgid "Number of triggers in Zabbix database."
+11161: msgstr "Zabbix 数据库中的触发器数量"
+#: include/classes/items/CHelpItems.php:931
+11164: msgid "Number of unsupported items in Zabbix database."
+11165: msgstr "Zabbix 数据库中不支持的监控项数量。"
+#: include/classes/api/services/CUser.php:689
+11398: msgid "Only Zabbix Admins can add user media."
+11399: msgstr "只有超级管理员可以添加用户报警媒介."
+#: include/classes/api/services/CUser.php:867
+11402: msgid "Only Zabbix Admins can change user media."
+11403: msgstr "只有超级管理员可以用改变户报警媒介."
+#: include/classes/api/services/CUser.php:948
+11406: msgid "Only Zabbix Admins can remove user media."
+11407: msgstr "只有超级管理员可以移除用户报警媒介."
+#: include/classes/api/services/CDRule.php:445
+11410: msgid "Only Zabbix agent, SNMPv1, SNMPv2 and SNMPv3 checks can be made unique."
+11411: msgstr "只有Zabbix代理, SNMPv1,SNMPv2 和 SNMPv3检查才是独特的."
+#: include/classes/setup/CSetupWizard.php:302
+12097: msgid "Please enter the host name or host IP address and port number of the Zabbix server, as well as the name of the installation (optional)."
+13098: msgstr "请输入主机名或主机IP地址和zabbix服务器的端口号，以及安装的名称（可选）。"
+#: include/classes/items/CHelpItems.php:959
+12752: msgid "Required performance of the Zabbix server, in new values per second expected."
+12753: msgstr "Zabbix服务器所需求的性能,每秒钟处理的新值数."
+#: include/classes/items/CHelpItems.php:935
+12887: msgid "Returns information associated with Zabbix Java gateway. Valid params are: ping, version."
+12888: msgstr "返回与Zabbix Java应用网关相关联的信息。可用的参数有：ping,version."
+#: include/actions.inc.php:895
+12947: msgid "Run custom commands on Zabbix agent"
+12948: msgstr "在Zabbix客户端上执行自定义命令"
+#: include/actions.inc.php:900
+12951: msgid "Run custom commands on Zabbix server"
+12952: msgstr "在Zabbix服务端上执行自定义命令"
+#: adm.gui.php:53 include/views/administration.general.gui.edit.php:59
+13771: msgid "Show warning if Zabbix server is down"
+13772: msgstr "当Zabbix服务器停机时显示警告"
+#: include/classes/server/CZabbixServer.php:239
+#, c-format
+13849: msgid "Size of the response received from Zabbix server \"%1$s\" exceeds the allowed size of %2$s bytes. This value can be increased in the ZBX_SOCKET_BYTES_LIMIT constant in include/defines.inc.php."
+13850: msgstr "Zabbix服务器\"%1$s\" 收到响应的大小字节超过允许的大小%2$s 。这个值通过在Zinclude / defines.inc.php文件中定义的ZBX_SOCKET_BYTES_LIMIT 变量来增加."
+#: include/classes/items/CHelpItems.php:883
+14016: msgid "Startup time of Zabbix server, Unix timestamp."
+14017: msgstr "Zabbix服务器的启动时间，Unix时间截."
+#: app/controllers/CControllerReportStatus.php:39
+#: app/views/monitoring.dashboard.view.php:111
+#: app/views/monitoring.widget.status.view.php:25
+#: app/views/report.status.php:25
+#: include/classes/screens/CScreenServerInfo.php:81 include/menu.inc.php:152
+#: include/screens.inc.php:37
+14087: msgid "Status of Zabbix"
+14088: msgstr "Zabbix状态"
+#: include/classes/db/Db2DbBackend.php:41
+#: include/classes/db/MysqlDbBackend.php:35
+#: include/classes/db/OracleDbBackend.php:36
+#: include/classes/db/PostgresqlDbBackend.php:44
+#: include/classes/db/SqliteDbBackend.php:34
+14566: msgid "The frontend does not match Zabbix database."
+14567: msgstr "前端不匹配Zabbix数据库."
+#: include/classes/db/DbBackend.php:48
+#, c-format
+14571: msgid "The frontend does not match Zabbix database. Current database version (mandatory/optional): %d/%d. Required mandatory version: %d. Contact your system administrator."
+14572: msgstr "前端不匹配Zabbix数据库.当前数据库版本(强制/可选):%d/%d. 需要的版本为: %d.  联系你的系统管理员."
+#: include/classes/items/CHelpItems.php:939
+14718: msgid "Time a particular Zabbix process or a group of processes (identified by <type> and <num>) spent in <state> in percentage."
+14719: msgstr "处在 <state> 状态下的某个或一组zabbix进程（由 <type> 和 <num> 指定）的百分比时间。"
+#: include/classes/items/CHelpItems.php:975
+15682: msgid "Uptime of Zabbix server process in seconds."
+15683: msgstr "Zabbix服务器进程的在线时间单位秒."
+#: include/classes/items/CHelpItems.php:73
+#: include/classes/items/CHelpItems.php:347
+16306: msgid "Version of Zabbix agent. Returns string"
+16307: msgstr "zabbix客户端（agent）的版本。返回字符串"
+#: index.php:25
+16794: msgid "ZABBIX"
+16795: msgstr "Zabbix"
+#: include/page_header.php:115
+16798: msgid "Zabbix"
+16799: msgstr "Zabbix"
+#: include/users.inc.php:55
+16802: msgid "Zabbix Admin"
+16803: msgstr "管理员"
+#: app/views/layout.htmlpage.menu.php:36
+16806: msgid "Zabbix Share"
+16807: msgstr "zabbix 共享"
+#: include/users.inc.php:56
+16810: msgid "Zabbix Super Admin"
+16811: msgstr "超级管理员"
+#: include/users.inc.php:54
+16814: msgid "Zabbix User"
+16815: msgstr "用户"
+#: app/views/administration.script.edit.php:48 include/discovery.inc.php:56
+#: include/items.inc.php:85 include/views/configuration.action.edit.php:857
+#: include/views/configuration.action.edit.php:1569
+#: include/views/js/configuration.discovery.edit.js.php:181
+16821: msgid "Zabbix agent"
+16822: msgstr "Zabbix 客户端"
+#: include/items.inc.php:86
+16825: msgid "Zabbix agent (active)"
+16826: msgstr "Zabbix客户端(主动式)"
+#: include/items.inc.php:94
+16829: msgid "Zabbix aggregate"
+16830: msgstr "Zabbix整合"
+#: include/validate.inc.php:335
+16833: msgid "Zabbix has received an incorrect request."
+16834: msgstr "Zabbix已接收到一个错误的请求."
+#: include/items.inc.php:92
+16837: msgid "Zabbix internal"
+16838: msgstr "Zabbix内部"
+#: include/perm.inc.php:48
+16841: msgid "Zabbix internal authentication"
+16842: msgstr "Zabbix内部认证"
+#: app/views/administration.script.edit.php:49
+#: include/classes/screens/CScreenServerInfo.php:40
+#: include/classes/setup/CSetupWizard.php:336
+#: include/views/configuration.action.edit.php:858
+#: include/views/configuration.action.edit.php:1570
+16849: msgid "Zabbix server"
+16850: msgstr "zabbix服务器"
+#: include/classes/server/CZabbixServer.php:304
+#, c-format
+msgid ""
+16855: "Zabbix server \"%s\" can not be reached. Possible reasons:\n"
+16856: "1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
+"2. Incorrect network configuration.\n"
+msgstr ""
+16859: "无法连到Zabbix服务器\"%s\". 可能的原因是:\n"
+16860: "1.  \"zabbix.conf.php\"中错误的IP/DNS;\n"
+"2. 错误的网络配置.\n"
+#: include/blocks.inc.php:473
+16864: msgid "Zabbix server IP or port is not set!"
+16865: msgstr "Zabbix主机IP或端口并未设置！"
+#: include/classes/setup/CSetupWizard.php:45
+#: include/classes/setup/CSetupWizard.php:300
+16859: msgid "Zabbix server details"
+16870: msgstr "zabbix 服务器 详细信息"
+#: jsrpc.php:180
+16873: msgid "Zabbix server is not running: the information displayed may not be current."
+16874: msgstr "Zabbix server is not running: the information displayed may not be current."
+#: include/blocks.inc.php:471
+16877: msgid "Zabbix server is running"
+16878: msgstr "Zabbix服务器端运行中"
+#: include/profiles.inc.php:180
+#, c-format
+16882: msgid "Zabbix server is running check interval \"%1$s\"."
+16883: msgstr "Zabbix主机正运行检查间隔\"%1$s\"."
+#: include/classes/setup/CSetupWizard.php:338
+16886: msgid "Zabbix server name"
+16887: msgstr "Zabbix主机名称"
+#: include/classes/setup/CSetupWizard.php:337
+16890: msgid "Zabbix server port"
+16891: msgstr "Zabbix主机端口"
+#: include/items.inc.php:93
+16894: msgid "Zabbix trapper"
+16895: msgstr "Zabbix采集器"
+##以上是.po文件的修改
+
+
+##以下是zabbix.php的修改
+
+
+

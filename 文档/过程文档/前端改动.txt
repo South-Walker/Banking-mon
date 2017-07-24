@@ -36,15 +36,12 @@
 1488: msgid "Cannot change authentication method to Zabbix internal"
 1489: msgstr "无法变更授权方式为Zabbix内部"
 #: include/classes/api/services/CUser.php:1397
-#, c-format
 1595: msgid "Cannot delete Zabbix internal user \"%1$s\", try disabling that user."
 1596: msgstr "无法删除Zabbix内部用户 \"%1$s\", 试试停用这个用户."
 #: include/classes/server/CZabbixServer.php:248
-#, c-format
 2174: msgid "Cannot read the response, check connection with the Zabbix server \"%1$s\"."
 2175: msgstr "不能读取响应, 检查与Zabbix服务器 \"%1$s\" 的连接."
 #: include/classes/server/CZabbixServer.php:218
-#, c-format
 2192: msgid "Cannot send command, check connection with Zabbix server \"%1$s\"."
 2193: msgstr "无法发送命令, 检查于Zabbix 服务器 \"%1$s\" 的连接."
 #: include/views/js/configuration.discovery.edit.js.php:603
@@ -57,11 +54,9 @@
 3199: msgid "Congratulations! You have successfully installed Zabbix frontend."
 3200: msgstr "恩！不错zabbix前端已经配置好了！千山万水第一步！加油，少年！"
 #: include/classes/server/CZabbixServer.php:234
-#, c-format
 3217: msgid "Connection timeout of %1$s seconds exceeded when connecting to Zabbix server \"%2$s\"."
 3218: msgstr "连接超时 %1$s 秒超出当连接Zabbix 服务器 \"%2$s\"."
 #: include/classes/server/CZabbixServer.php:312
-#, c-format
 msgid ""
 3223: "Connection to Zabbix server \"%s\" failed. Possible reasons:\n"
 3224: "1. Incorrect server IP/DNS in the \"zabbix.conf.php\";\n"
@@ -138,7 +133,7 @@ msgstr ""
 #: include/classes/items/CHelpItems.php:959
 12752: msgid "Required performance of the Zabbix server, in new values per second expected."
 12753: msgstr "Zabbix服务器所需求的性能,每秒钟处理的新值数."
-#: include/classes/items/CHelpItems.php:935
+#: include/classes/items/CHelpItems.php:935935G
 12887: msgid "Returns information associated with Zabbix Java gateway. Valid params are: ping, version."
 12888: msgstr "返回与Zabbix Java应用网关相关联的信息。可用的参数有：ping,version."
 #: include/actions.inc.php:895
@@ -153,7 +148,7 @@ msgstr ""
 #: include/classes/server/CZabbixServer.php:239
 #, c-format
 13849: msgid "Size of the response received from Zabbix server \"%1$s\" exceeds the allowed size of %2$s bytes. This value can be increased in the ZBX_SOCKET_BYTES_LIMIT constant in include/defines.inc.php."
-13850: msgstr "Zabbix服务器\"%1$s\" 收到响应的大小字节超过允许的大小%2$s 。这个值通过在Zinclude / defines.inc.php文件中定义的ZBX_SOCKET_BYTES_LIMIT 变量来增加."
+注意13850: msgstr "Zabbix服务器\"%1$s\" 收到响应的大小字节超过允许的大小%2$s 。这个值通过在Zinclude / defines.inc.php文件中定义的ZBX_SOCKET_BYTES_LIMIT 变量来增加."
 #: include/classes/items/CHelpItems.php:883
 14016: msgid "Startup time of Zabbix server, Unix timestamp."
 14017: msgstr "Zabbix服务器的启动时间，Unix时间截."
@@ -271,7 +266,121 @@ msgstr ""
 ##以上是.po文件的修改
 
 
-##以下是zabbix.php的修改
+##以下是对所有引用zabbix.php的修改
+将zabbix.php 改名为 bankingmon.php
+app/controllers/CControllerAcknowledgeCreate.php:39
+app/controllers/CControllerAcknowledgeCreate.php:197
+app/controllers/CControllerAcknowledgeEdit.php:50
+app/controllers/CControllerMediatypeCreate.php:62
+app/controllers/CControllerMediatypeCreate.php:147
+app/controllers/CControllerMediatypeCreate.php:151
+app/controllers/CControllerMediatypeDelete.php:59
+app/controllers/CControllerMediatypeDisable.php:65
+app/controllers/CControllerMediatypeEnable.php:65
+app/controllers/CControllerMediatypeList.php:132
+app/controllers/CControllerMediatypeUpdate.php:63
+app/controllers/CControllerMediatypeUpdate.php:161
+app/controllers/CControllerMediatypeUpdate.php:165
+app/controllers/CControllerProxyCreate.php:54
+app/controllers/CControllerProxyCreate.php:106
+app/controllers/CControllerProxyCreate.php:110
+app/controllers/CControllerProxyDelete.php:59
+app/controllers/CControllerProxyHostDisable.php:70
+app/controllers/CControllerProxyHostEnable.php:70
+app/controllers/CControllerProxyList.php:103
+app/controllers/CControllerProxyUpdate.php:56
+app/controllers/CControllerProxyUpdate.php:119
+app/controllers/CControllerProxyUpdate.php:124
+app/controllers/CControllerScriptCreate.php:45
+app/controllers/CControllerScriptCreate.php:94
+app/controllers/CControllerScriptCreate.php:98
+app/controllers/CControllerScriptDelete.php:69
+app/controllers/CControllerScriptList.php:94
+app/controllers/CControllerScriptUpdate.php:46
+app/controllers/CControllerScriptUpdate.php:103
+app/controllers/CControllerScriptUpdate.php:107
+app/views/administration.mediatype.edit.php:148
+app/views/administration.mediatype.edit.php:162
+app/views/administration.mediatype.list.php:30
+app/views/administration.mediatype.list.php:110
+app/views/administration.proxy.edit.js.php:12
+app/views/administration.proxy.edit.php:130
+app/views/administration.proxy.edit.php:144
+app/views/administration.proxy.list.php:30
+app/views/administration.proxy.list.php:97
+app/views/administration.script.edit.php:106
+app/views/administration.script.edit.php:120
+app/views/administration.script.list.php:30
+app/views/administration.script.list.php:86
+app/views/layout.htmlpage.menu.php:63
+app/views/monitoring.dashboard.view.php:58
+app/views/monitoring.dashboard.view.php:81
+app/views/monitoring.dashboard.view.php:138
+app/views/monitoring.dashboard.view.php:143
+app/views/monitoring.dashboard.view.php:203
+app/views/monitoring.problem.view.php:263
+app/views/monitoring.widget.discovery.view.php:53
+app/views/monitoring.widget.issues.view.php:22
+app/views/monitoring.widget.system.view.php:22
+app/views/monitoring.widget.web.view.php:81
+app/views/system.warning.php:27
+conf.import.php:66
+include/blocks.inc.php:176
+include/blocks.inc.php:746
+include/classes/core/ZBase.php:433
+include/classes/html/CForm.php:46
+include/classes/screens/CScreenDiscovery.php:126
+include/classes/screens/CScreenHttpTest.php:90
+include/classes/screens/CScreenHttpTest.php:117
+include/classes/screens/CScreenHttpTest.php:119
+include/classes/screens/CScreenProblem.php:609
+include/classes/screens/CScreenProblem.php:628
+include/classes/screens/CScreenServerInfo.php:42
+include/defines.inc.php:1081
+include/events.inc.php:500
+include/events.inc.php:558
+include/func.inc.php:1695
+include/html.inc.php:526
+include/html.inc.php:539
+include/menu.inc.php:43
+include/menu.inc.php:50
+include/menu.inc.php:61
+include/menu.inc.php:95
+include/menu.inc.php:102
+include/menu.inc.php:149
+include/menu.inc.php:267
+include/menu.inc.php:288
+include/menu.inc.php:294
+include/services.inc.php:209
+include/services.inc.php:218
+include/services.inc.php:233
+include/views/inventory.host.view.php:139
+include/views/inventory.host.view.php:148
+include/views/monitoring.sysmap.list.php:69
+js/class.pmaster.js:401
+js/main.js:611
+js/main.js:623
+js/main.js:639
+js/menupopup.js:122
+js/menupopup.js:154
+js/menupopup.js:443
+js/menupopup.js:465
+js/menupopup.js:549
+js/menupopup.js:611
+js/menupopup.js:627
+jsrpc.php:121
+map.import.php:66
+report2.php:519
+report4.php:278
+screen.import.php:66
+search.php:235
+search.php:242
+search.php:342
+search.php:348
+tr_status.php:454
+tr_status.php:575
+tr_status.php:634
 
+##TODO .avg图片的修改
 
 

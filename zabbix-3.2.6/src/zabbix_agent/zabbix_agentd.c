@@ -59,13 +59,13 @@ const char	*progname = NULL;
 
 /* default config file location */
 #ifdef _WINDOWS
-#	define DEFAULT_CONFIG_FILE	"C:\\zabbix_agentd.conf"
+#	define DEFAULT_CONFIG_FILE	"C:\\bankingmon_agentd.conf"
 #else
-#	define DEFAULT_CONFIG_FILE	SYSCONFDIR "/zabbix_agentd.conf"
+#	define DEFAULT_CONFIG_FILE	SYSCONFDIR "/bankingmon_agentd.conf"
 #endif
 
 /* application TITLE */
-const char	title_message[] = "zabbix_agentd"
+const char	title_message[] = "bankingmon_agentd"
 #if defined(_WIN64)
 				" Win64"
 #elif defined(_WIN32)
@@ -79,7 +79,7 @@ const char	title_message[] = "zabbix_agentd"
 	;
 /* end of application TITLE */
 
-const char	syslog_app_name[] = "zabbix_agentd";
+const char	syslog_app_name[] = "bankingmon_agentd";
 
 /* application USAGE message */
 const char	*usage_message[] = {
@@ -102,12 +102,12 @@ const char	*usage_message[] = {
 
 /* application HELP message */
 const char	*help_message[] = {
-	"A Zabbix daemon for monitoring of various server parameters.",
+	"A Bankingmon daemon for monitoring of various server parameters.",
 	"",
 	"Options:",
 	"  -c --config config-file        Absolute path to the configuration file",
 	"                                 (default: \"" DEFAULT_CONFIG_FILE "\")",
-	"  -f --foreground                Run Zabbix agent in foreground",
+	"  -f --foreground                Run Bankingmon agent in foreground",
 	"  -p --print                     Print known items and exit",
 	"  -t --test item-key             Test specified item and exit",
 #ifdef _WINDOWS
@@ -116,11 +116,11 @@ const char	*help_message[] = {
 	"                                 configuration file",
 	"Functions:",
 	"",
-	"  -i --install                   Install Zabbix agent as service",
-	"  -d --uninstall                 Uninstall Zabbix agent from service",
+	"  -i --install                   Install Bankingmon agent as service",
+	"  -d --uninstall                 Uninstall Bankingmon agent from service",
 
-	"  -s --start                     Start Zabbix agent service",
-	"  -x --stop                      Stop Zabbix agent service",
+	"  -s --start                     Start Bankingmon agent service",
+	"  -x --stop                      Stop Bankingmon agent service",
 #else
 	"  -R --runtime-control runtime-option   Perform administrative functions",
 	"",
@@ -141,9 +141,9 @@ const char	*help_message[] = {
 	"  -V --version                   Display version number",
 	"",
 #ifdef _WINDOWS
-	"Example: zabbix_agentd -c C:\\zabbix\\zabbix_agentd.conf",
+	"Example: bankingmon_agentd -c C:\\bankingmon\\bankingmon_agentd.conf",
 #else
-	"Example: zabbix_agentd -c /etc/zabbix/zabbix_agentd.conf",
+	"Example: bankingmon_agentd -c /etc/bankingmon/bankingmon_agentd.conf",
 #endif
 	NULL	/* end of text */
 };
@@ -343,7 +343,7 @@ static int	parse_commandline(int argc, char **argv, ZBX_TASK_EX *t)
 		case ZBX_TASK_STOP_SERVICE:
 			if (0 != (t->flags & ZBX_TASK_FLAG_FOREGROUND))
 			{
-				zbx_error("foreground option cannot be used with Zabbix agent services");
+				zbx_error("foreground option cannot be used with Bankingmon agent services");
 				ret = FAIL;
 				goto out;
 			}
@@ -351,7 +351,7 @@ static int	parse_commandline(int argc, char **argv, ZBX_TASK_EX *t)
 		default:
 			if (0 != (t->flags & ZBX_TASK_FLAG_MULTIPLE_AGENTS))
 			{
-				zbx_error("multiple agents option can be used only with Zabbix agent services");
+				zbx_error("multiple agents option can be used only with Bankingmon agent services");
 				ret = FAIL;
 				goto out;
 			}
@@ -1065,7 +1065,7 @@ void	zbx_free_service_resources(void)
 #ifndef _WINDOWS
 	zbx_unload_modules();
 #endif
-	zabbix_log(LOG_LEVEL_INFORMATION, "Zabbix Agent stopped. Zabbix %s (revision %s).",
+	zabbix_log(LOG_LEVEL_INFORMATION, "Bankingmon Agent stopped. Bankingmon %s (revision %s).",
 			ZABBIX_VERSION, ZABBIX_REVISION);
 
 	zabbix_close_log();

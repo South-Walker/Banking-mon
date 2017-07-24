@@ -25,15 +25,15 @@
 #endif
 
 static const char	copyright_message[] =
-	"Copyright (C) 2017 Zabbix SIA\n"
+	"Copyright (C) 2017 Bankingmon SIA\n"
 	"License GPLv2+: GNU GPL version 2 or later <http://gnu.org/licenses/gpl.html>.\n"
 	"This is free software: you are free to change and redistribute it according to\n"
 	"the license. There is NO WARRANTY, to the extent permitted by law.";
 
 static const char	help_message_footer[] =
-	"Report bugs to: <https://support.zabbix.com>\n"
-	"Zabbix home page: <http://www.zabbix.com>\n"
-	"Documentation: <https://www.zabbix.com/documentation>";
+	"Report bugs to: <https://support.bankingmon.com>\n"
+	"Bankingmon home page: <http://www.bankingmon.com>\n"
+	"Documentation: <https://www.bankingmon.com/documentation>";
 
 /******************************************************************************
  *                                                                            *
@@ -50,7 +50,7 @@ static const char	help_message_footer[] =
  ******************************************************************************/
 void	version(void)
 {
-	printf("%s (Zabbix) %s\n", title_message, ZABBIX_VERSION);
+	printf("%s (Bankingmon) %s\n", title_message, ZABBIX_VERSION);
 	printf("Revision %s %s, compilation time: %s %s\n\n", ZABBIX_REVISION, ZABBIX_REVDATE, __DATE__, __TIME__);
 	puts(copyright_message);
 }

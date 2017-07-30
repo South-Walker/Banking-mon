@@ -2,6 +2,7 @@
 ./include/page_header.php 115行 修改为 $pageTitle .= isset($page['title']) ? $page['title'] : _('Banking_mon'); 
 ./include/html.inc.php 815行 修改为 $with_version ? 'Bankingmon'.ZABBIX_VERSION.'. ' : null,
 ./include/html.inc.php 817行 修改为 (new CLink('BankingMon', ''))
+./include/html.inc.php 591行 修改为 foreach (['bkm' => '', 'snmp' => 'snmp_', 'jmx' => 'jmx_', 'ipmi' => 'ipmi_'] as $type => $prefix) {
 ./app/views/layout.htmlpage.menu.php 33行 修改为 (new CLink('Share', ''))
 ./app/views/layout.htmlpage.menu.php 36行 修改为 ->setAttribute('title', _('Bankingmon Share'))
 ./app/views/layout.htmlpage.menu.php 39行 修改为 (new CLink(SPACE, ''))
@@ -381,6 +382,14 @@ tr_status.php:454
 tr_status.php:575
 tr_status.php:634
 
-##TODO .avg图片的修改
+##对默认端口的修改
+app/controllers/CControllerProxyEdit.php:90 
+'port' => '9611',
 
+include/classes/core/CConfigFile.php:202
+$this->config['ZBX_SERVER_PORT'] = '9611';
 
+include/classes/setup/CSetupWizard.php:289
+(new CNumericBox('zbx_server_port', $this->getConfig('ZBX_SERVER_PORT', '9611'), 5, false, false, false))
+include/classes/setup/CSetupWizard.php:504
+$this->setConfig('ZBX_SERVER_PORT', getRequest('zbx_server_port', $this->getConfig('ZBX_SERVER_PORT', '9611')));

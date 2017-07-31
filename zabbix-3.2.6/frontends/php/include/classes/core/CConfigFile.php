@@ -24,7 +24,7 @@ class CConfigFile {
 	const CONFIG_NOT_FOUND = 1;
 	const CONFIG_ERROR = 2;
 
-	const CONFIG_FILE_PATH = '/conf/zabbix.conf.php';
+	const CONFIG_FILE_PATH = '/conf/bankingmon.conf.php';
 
 	private static $supported_db_types = [
 		ZBX_DB_DB2 => true,

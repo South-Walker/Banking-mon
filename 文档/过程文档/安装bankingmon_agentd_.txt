@@ -1,0 +1,107 @@
+
+解决不能上网
+对于192.168.15.145
+vi /etc/resolv.conf
+添加
+nameserver 192.168.15.1
+
+对于192.168.15.146
+vi /etc/resolv.conf
+添加
+nameserver 192.168.15.1
+
+
+更换yum源
+对于192.168.15.145
+将5改为6，与5.11改为6.7
+vi /etc/yum.repos.d/Ce新文件）
+添加
+[base]
+name=CentOS-$releasever - Base
+failovermethod=priority
+baseurl=http://vault.centos.org/5.11/os/$basearch/
+
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/RPM-GPG-KEY-CentOS-5
+ 
+#released updates 
+[updates]
+name=CentOS-$releasever - Updates
+failovermethod=priority
+baseurl=http://vault.centos.org/5.11/updates/$basearch/
+
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/RPM-GPG-KEY-CentOS-5
+ 
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras
+failovermethod=priority
+baseurl=http://vault.centos.org/5.11/extras/$basearch/
+
+gpgcheck=1
+gpgkey=http://vault.centos.org/centos/RPM-GPG-KEY-CentOS-5
+ 
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus
+failovermethod=priority
+baseurl=http://vault.centos.org/5.11/centosplus/$basearch/
+
+gpgcheck=1
+enabled=0
+gpgkey=http://vault.centos.org/centos/RPM-GPG-KEY-CentOS-5
+
+ 
+#contrib - packages by Centos Users
+[contrib]
+name=CentOS-$releasever - Contrib
+failovermethod=priority
+baseurl=http://vault.centos.org/5.11/contrib/$basearch/
+
+gpgcheck=1
+enabled=0
+gpgkey=http://vault.centos.org/centos/RPM-GPG-KEY-CentOS-5
+
+
+将5改为6，与5.11改为6.7
+
+对于192.168.15.146，将5.11改为5.4
+
+另外又在192.168.15.145，192.168.15.146里，安装
+yum -y install httpd php php-gd php-bcmath php-mbstring php-xml php-ldap wget ntpdate net-snmp*
+yum install -y gcc mysql-community-devel libxml2-devel unixODBC-devel net-snmp-devel libcurl-devel libssh2-devel OpenIPMI-devel  openldap-devel
+至此已完成环境的安装。可以编译了。
+
+
+192.168.15.146
+从github上下载的（7.28）zabbix-3.2.6
+
+make clean(出现了error的解决办法)
+makeinstall
+
+vi /usr/local/etc/zabbix_agentd.conf
+server=192.168.15.143
+serveractive=192.168.15.143
+hostname=192.168.15.143
+
+groupadd bkm
+useradd -g bkm bkm
+
+zabbix_agentd(出现错误，此时修改/usr/local/etc/zabbix_agentd.conf名字为bankingmon_agentd.conf)
+此时正常，并有数据连接到server
+
+192.168.15.145
+
+从github上下载的（7.28）zabbix-3.2.6
+make clean(出现了error的解决办法)
+makeinstall
+
+vi /usr/local/etc/zabbix_agentd.conf
+server=192.168.15.143
+serveractive=192.168.15.143
+hostname=192.168.15.143
+groupadd bkm
+useradd -g bkm bkm
+zabbix_agentd(出现错误，此时修改/usr/local/etc/zabbix_agentd.conf名字为bankingmon_agentd.conf)
+此时正常，并有数据连接到server

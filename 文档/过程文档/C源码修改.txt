@@ -1,0 +1,16 @@
+修改默认port
+\build\win32\examples\zabbix_sender\sender.c:50
+if (-1 == zabbix_sender_send_values(argv[1], 9611, NULL, &value, 1, &result))
+
+include\comms.h:164
+include\comms.h:165
+include\comms.h:166
+include\comms.h:168
+include\comms.h:169
+
+man\zabbix_sender.man:303
+Default is 9611.
+
+\misc\snmptrap\snmptrap.sh
+ZABBIX_PORT="9611";
+

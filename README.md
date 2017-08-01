@@ -69,7 +69,7 @@ Bankingmon
 >       * 该函数在zabbix-3.2.6\include\daemon.h头文件中也被宏定义为START_MAIN_ZABBIX_ENTRY（这个名称在编译service时宏定义了daemon_start）
 >       * 我意识到了我对第一个分支似乎有误解，并非是用root就不能运行，反而是，它希望能以root运行，从而得到zabbix用户的信息，证据在于User键对应的值CONFIG_USER从定义那一刻开始就是null，唯一被赋值的位置就是该函数
 >* 修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c源码文件第310行，使在linux中agent的默认用户为bankingmon
->* 修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return bankingmon_agentd(这个改动但凡我是理智的状态都不会进行，日后需要对get_program_name函数重点监督)，使得在linux中对agentd输入参数错误后输出的文本里没有zabbix
+>* 修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return "bankingmon_agentd"(这个改动但凡我是理智的状态都不会进行，日后需要对get_program_name函数重点监督)，使得在linux中对agentd输入参数错误后输出的文本里没有zabbix
 
 #### 2017.7.29
 >* 肖第八次修改

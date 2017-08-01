@@ -77,7 +77,7 @@ Bankingmon
 
 #### 2017.8.1
 >* 肖第九次修改
->* 修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81（496及497可以不更改，应该不影响功能）行，使得编译出的agentd文件名字不含zabbix
+>* 修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81、496及497行，使得编译出的agentd文件名字不含zabbix
 >* 可以认为linux下agent初步修改完毕
 
 #### 2017.7.11

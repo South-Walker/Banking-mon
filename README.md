@@ -51,7 +51,7 @@ BankingMon
 >       * 将组合成的字符以流的形式写入日志
 >       * 综上，该函数本身没有修改必要，应该留意的是传入该函数的字符参数中的zabbix字样
 >   * 修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第1068行对日志的写入操作，将传入的字符串中的zabbix抹除，类似的对第866行，第883行进行了修改
->* 可以认为window下agent初步修改完毕
+>* 可以认为windows下agent初步修改完毕
 
 #### 2017.7.26
 >* 肖第六次提交
@@ -78,6 +78,7 @@ BankingMon
 #### 2017.8.1
 >* 肖第九次修改
 >* 修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81（496及497可以不更改，应该不影响功能）行，使得编译出的agentd文件名字不含zabbix
+>* 可以认为linux下agent初步修改完毕
 
 #### 2017.7.11
 >* 修改翻译文件

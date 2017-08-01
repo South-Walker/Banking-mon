@@ -61,7 +61,6 @@ BankingMon
 ~~从肖第三次修改开始的所有修改内容肖某没有push，原因是需要检测其可行性，这方面工作肖某已初步编译并部署测试过，目前由单乐乐在进行确认，确认完毕即可正式提交~~(2017/7/24 21.41)<br>
 经单乐乐确认完毕，已经可以认为修改后的windows下的agent在视线可及范围内（日志，文档，版本，服务，进程）不带有任何的zabbix元素的同时具有与原agent一致的功能，故肖某认为这一版本是可以发布的(2017/7/25 0.00)<br>
 
-
 #### 2017.7.29
 >* 肖第七次修改（从本次起直到声明为止所有的修改不会push）
 >   * 关于linux下进程启动前先判断用户名的说明
@@ -71,6 +70,14 @@ BankingMon
 >       * 我意识到了我对第一个分支似乎有误解，并非是用root就不能运行，反而是，它希望能以root运行，从而得到zabbix用户的信息，证据在于User键对应的值CONFIG_USER从定义那一刻开始就是null，唯一被赋值的位置就是该函数
 >* 修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c源码文件第310行，使在linux中agent的默认用户为bankingmon
 >* 修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return bankingmon_agentd(这个改动但凡我是理智的状态都不会进行，日后需要对get_program_name函数重点监督)，使得在linux中对agentd输入参数错误后输出的文本里没有zabbix
+
+#### 2017.7.29
+>* 肖第八次修改
+>* 修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第525行，使得存储agentd之pid的文件名不含zabbix
+
+#### 2017.8.1
+>* 肖第九次修改
+>* 修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81（496及497可以不更改，应该不影响功能）行，使得编译出的agentd文件名字不含zabbix
 
 #### 2017.7.11
 >* 修改翻译文件

@@ -1,4 +1,4 @@
-影响到全平台的修改
+﻿影响到全平台的修改
     修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第62行与第64行中的zabbix配置文件的默认文件名
     修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第104行到第149行中的帮助文档
     修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第27行到第36行中的zabbix字样
@@ -12,6 +12,14 @@
     修改了zabbix-3.2.6\build\win32\project\Makefile_agent第20行TARGETNAME属性的值
     修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第346行与第354行中的zabbix字样
 
-只影响Linux平台的修改
+只影响Linux及其他平台的修改
     修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c第310行使默认的用户为bankingmon
-    修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return bankingmon_agentd
+    修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return "bankingmon_agentd"
+    修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第525行
+    修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81、496及497行
+
+影响server的修改
+    修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c第310行使默认的用户为bankingmon
+    修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return "bankingmon_agentd"
+    修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第27行到第36行中的zabbix字样
+    修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第53行常量的值

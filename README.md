@@ -16,8 +16,8 @@ Bankingmon
 >* 提交原始文件
 >* 肖第一次提交
 >   * 提交了对数据库脚本修改的说明
->   * 修改了schema.sql，235行，DEFAULT 'Zabbix' => DEFAULT 'Banking-mon'
->   * 修改了data.sql，2行，Zabbix => Banking-mon，en_GB => zh_CN, 5fce1b3e34b520afeffb37ce08c7cd66 => 68d5921eeb0ff6d59354210b2a7d06b5
+>   * 修改了schema.sql，235行，DEFAULT 'Zabbix' => DEFAULT 'Bankingmon'
+>   * 修改了data.sql，2行，Zabbix => Bankingmon，en_GB => zh_CN, 5fce1b3e34b520afeffb37ce08c7cd66 => 68d5921eeb0ff6d59354210b2a7d06b5
 >   * 结果：编译后web接口管理员初始密码修改为bankingmon，初始语言变成中文
 >   * 备注：密码是32位MD5加密后直接存入库的
 
@@ -79,6 +79,29 @@ Bankingmon
 >* 肖第九次修改
 >* 修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81、496及497行，使得编译出的agentd文件名字不含zabbix
 >* 可以认为linux下agent初步修改完毕
+
+#### 2017.8.1
+>* 肖第十次修改
+>* 证明了以下改动依旧生效
+    >* 修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c第310行使默认的用户为bankingmon
+    >* 修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return "bankingmon_agentd"
+    >* 修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第27行到第36行中的zabbix字样
+    >* 修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第53行常量的值
+
+#### 2017.8.1
+>* 肖第十一次修改
+>* 修改了zabbix-3.2.6\include\comms.h第164,165,168,169行使默认的端口为32768，当然，这个端口是不能被接受的，使得如果配置文件不写明监听端口，程序就崩溃，变相抹去zabbix痕迹
+>* 修改了zabbix-3.2.6\src\zabbix_server\server.c第76~101，66,67行，使得帮助文档中没有zabbix
+>* 修改了zabbix-3.2.6\src\zabbix_server\server.c第1101，892，893，886，833行，处理在server端写入日志的内容
+>* 修改了zabbix-3.2.6\src\zabbix_server\server.c第63行，使得默认的配置文件名字变更
+>* 修改了zabbix-3.2.6\src\zabbix_server\server.c第76~101行中明文出现的zabbix
+
+#### 2017.8.1
+>* 肖第十二次修改
+>* 修改了zabbix-3.2.6\src\zabbix_server\server.c第376,379行,等同于修改了pid文件与tmp文件默认值
+>* 修改了zabbix-3.2.6\src\zabbix_server\server.c第776,即启动成功的内容
+>* 修改了zabbix-3.2.6\src\zabbix_server\Makefile.in源码第81、576及577行，使得编译出的agentd文件名字不含zabbix
+>* zabbix-3.2.6\src\zabbix_server\server.c第382，397，400，403行，分别是默认脚本地址（ALERT_SCRIPTS_PATH），延展脚本地址（EXTERNALSCRIPTS），ssl配置（SSL_CERT_LOCATION），ssl秘钥存储位置（SSL_KEY_LOCATION），含有zabbix名字但是不敢改，建议直接修改配置文件对应值或者在后期再想办法
 
 #### 2017.7.11
 >* 修改翻译文件

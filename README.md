@@ -71,7 +71,7 @@ Bankingmon
 >* 修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c源码文件第310行，使在linux中agent的默认用户为bankingmon
 >* 修改了zabbix-3.2.6\src\libs\zbxcommon\misc.c第116行为return "bankingmon_agentd"(这个改动但凡我是理智的状态都不会进行，日后需要对get_program_name函数重点监督)，使得在linux中对agentd输入参数错误后输出的文本里没有zabbix
 
-#### 2017.7.29
+#### 2017.7.30
 >* 肖第八次修改
 >* 修改了zabbix-3.2.6\src\zabbix_agent\zabbix_agentd.c源码第525行，使得存储agentd之pid的文件名不含zabbix
 
@@ -80,7 +80,7 @@ Bankingmon
 >* 修改了zabbix-3.2.6\src\zabbix_agent\Makefile.in源码第81、496及497行，使得编译出的agentd文件名字不含zabbix
 >* 可以认为linux下agent初步修改完毕
 
-#### 2017.8.1
+#### 2017.8.3
 >* 肖第十次修改
 >* 证明了以下改动依旧生效
     >* 修改了zabbix-3.2.6\src\libs\zbxnix\daemon.c第310行使默认的用户为bankingmon
@@ -88,7 +88,7 @@ Bankingmon
     >* 修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第27行到第36行中的zabbix字样
     >* 修改了zabbix-3.2.6\src\libs\zbxcommon\str.c源码第53行常量的值
 
-#### 2017.8.1
+#### 2017.8.4
 >* 肖第十一次修改
 >* 修改了zabbix-3.2.6\include\comms.h第164,165,168,169行使默认的端口为32768，当然，这个端口是不能被接受的，使得如果配置文件不写明监听端口，程序就崩溃，变相抹去zabbix痕迹
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第76~101，66,67行，使得帮助文档中没有zabbix
@@ -96,12 +96,20 @@ Bankingmon
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第63行，使得默认的配置文件名字变更
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第76~101行中明文出现的zabbix
 
-#### 2017.8.1
+#### 2017.8.5
 >* 肖第十二次修改
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第376,379行,等同于修改了pid文件与tmp文件默认值
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第776,即启动成功的内容
 >* 修改了zabbix-3.2.6\src\zabbix_server\Makefile.in源码第81、576及577行，使得编译出的agentd文件名字不含zabbix
 >* zabbix-3.2.6\src\zabbix_server\server.c第382，397，400，403行，分别是默认脚本地址（ALERT_SCRIPTS_PATH），延展脚本地址（EXTERNALSCRIPTS），ssl配置（SSL_CERT_LOCATION），ssl秘钥存储位置（SSL_KEY_LOCATION），含有zabbix名字但是不敢改，建议直接修改配置文件对应值或者在后期再想办法
+
+#### 2017.8.6
+>* 肖第十三次修改
+>* 修改了zabbix-3.2.6\src\zabbix_sender\Makefile.in第81,439,440,使得在linux平台编译生成的sender文件名不含zabbix
+>* 修改了zabbix-3.2.6\build\win32\project\Makefile_sender第20行使得在win平台编译生成的sender的文件名不含zabbix
+>* 修改了zabbix-3.2.6\build\win32\project\zabbix_sender_desc.h第4行，
+>* 修改了zabbix-3.2.6\src\zabbix_sender\zabbix_sender.c第35,36，79~181行，使得帮助文本和版本号内没有zabbix
+>* 修改了zabbix-3.2.6\src\zabbix_sender\zabbix_sender.c第724，1067行，这样写入日志文件的文本内没有zabbix（sender会写入日志？）
 
 #### 2017.7.11
 >* 修改翻译文件

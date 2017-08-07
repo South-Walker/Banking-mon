@@ -101,15 +101,19 @@ Bankingmon
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第376,379行,等同于修改了pid文件与tmp文件默认值
 >* 修改了zabbix-3.2.6\src\zabbix_server\server.c第776,即启动成功的内容
 >* 修改了zabbix-3.2.6\src\zabbix_server\Makefile.in源码第81、576及577行，使得编译出的agentd文件名字不含zabbix
->* zabbix-3.2.6\src\zabbix_server\server.c第382，397，400，403行，分别是默认脚本地址（ALERT_SCRIPTS_PATH），延展脚本地址（EXTERNALSCRIPTS），ssl配置（SSL_CERT_LOCATION），ssl秘钥存储位置（SSL_KEY_LOCATION），含有zabbix名字但是不敢改，建议直接修改配置文件对应值或者在后期再想办法
+>* zabbix-3.2.6\src\zabbix_server\server.c第382，397，400，403行，分别是报警脚本地址（ALERT_SCRIPTS_PATH），延展脚本地址（EXTERNALSCRIPTS），ssl配置（SSL_CERT_LOCATION），ssl秘钥存储位置（SSL_KEY_LOCATION），含有zabbix名字但是不敢改，建议直接修改配置文件对应值或者在后期再想办法
 
 #### 2017.8.6
 >* 肖第十三次修改
->* 修改了zabbix-3.2.6\src\zabbix_sender\Makefile.in第81,439,440,使得在linux平台编译生成的sender文件名不含zabbix
 >* 修改了zabbix-3.2.6\build\win32\project\Makefile_sender第20行使得在win平台编译生成的sender的文件名不含zabbix
 >* 修改了zabbix-3.2.6\build\win32\project\zabbix_sender_desc.h第4行，
 >* 修改了zabbix-3.2.6\src\zabbix_sender\zabbix_sender.c第35,36，79~181行，使得帮助文本和版本号内没有zabbix
 >* 修改了zabbix-3.2.6\src\zabbix_sender\zabbix_sender.c第724，1067行，这样写入日志文件的文本内没有zabbix（sender会写入日志？）
+
+#### 2017.8.7
+>* 肖第十四次修改
+>* 修改了zabbix-3.2.6\src\zabbix_sender\Makefile.in第81,439,440,使得在linux平台编译生成的sender文件名不含zabbix
+>* 可以认为各平台下sender初步修改完毕
 
 #### 2017.7.11
 >* 修改翻译文件

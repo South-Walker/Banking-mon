@@ -115,6 +115,9 @@ Bankingmon
 >* 修改了zabbix-3.2.6\src\zabbix_sender\Makefile.in第81,439,440,使得在linux平台编译生成的sender文件名不含zabbix
 >* 可以认为各平台下sender初步修改完毕
 
+#### 2017.8.9
+>* 添加了对zabbix报警机制的使用心得,位于/肖说明文档目录下
+
 #### 2017.7.11
 >* 修改翻译文件
 >* 朱提交

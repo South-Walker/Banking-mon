@@ -17,13 +17,14 @@ zabbix_sender -z 127.0.0.1 -k"helloworld" -o "hi" -s "Zabbix server"
 >	* Script parameters填写想要传递进脚本的参数，依次按$1,$2,$3……排布，比较特殊的几个参数名如下：
 >		* {ALERT.SENDTO}:执行脚本的用户对应的参数
 >		* {ALERT.SUBJECT}:与Actions => Operations下Default subject对应内容一致
->		* {ALERT.MESSAGE}与Actions => Operations下Default message对应内容一致
+>		* {ALERT.MESSAGE}:与Actions => Operations下Default message对应内容一致
 >* Users内
->	* 在Media中添加新创建的Media types，Send to值填写脚本所在的主机地址
+>	* 在Media中添加新创建的Media types，Send to值填写用户微信openid
 >* Actions内
 >	* 在Triggers事件下Create actio
 >	* Condition添加刚创建的触发器
 >	* 新建Operations，User填写添加了对应Media的用户
+>   * 排布时可通过在Message内添加\r\n来控制换行
 
 以上如果是按我的操作添加的测试代码，那么结果是每打开bash一次就会触发对应的action，查看Triggers top 100，发现Triggers工作正常，查看Action log，发现action被执行，检查对应脚本，发现脚本被成功执行
 

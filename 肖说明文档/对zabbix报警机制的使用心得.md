@@ -15,7 +15,7 @@ zabbix_sender -z 127.0.0.1 -k"helloworld" -o "hi" -s "Zabbix server"
 >	* Type填写Script，表示使用自己编写的脚本
 >	* Script name填写脚本名称，如testScript.sh
 >	* Script parameters填写想要传递进脚本的参数，依次按$1,$2,$3……排布，比较特殊的几个参数名如下：
->		* {ALERT.SENDTO}:执行脚本的主机位置
+>		* {ALERT.SENDTO}:执行脚本的用户对应的参数
 >		* {ALERT.SUBJECT}:与Actions => Operations下Default subject对应内容一致
 >		* {ALERT.MESSAGE}与Actions => Operations下Default message对应内容一致
 >* Users内

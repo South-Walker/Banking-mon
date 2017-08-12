@@ -1720,3 +1720,13 @@ ALTER TABLE `corr_condition_tagpair` ADD CONSTRAINT `c_corr_condition_tagpair_1`
 ALTER TABLE `corr_condition_tagvalue` ADD CONSTRAINT `c_corr_condition_tagvalue_1` FOREIGN KEY (`corr_conditionid`) REFERENCES `corr_condition` (`corr_conditionid`) ON DELETE CASCADE;
 ALTER TABLE `corr_operation` ADD CONSTRAINT `c_corr_operation_1` FOREIGN KEY (`correlationid`) REFERENCES `correlation` (`correlationid`) ON DELETE CASCADE;
 ALTER TABLE `task_close_problem` ADD CONSTRAINT `c_task_close_problem_1` FOREIGN KEY (`taskid`) REFERENCES `task` (`taskid`) ON DELETE CASCADE;
+SET GLOBAL event_scheduler = 1;
+CREATE TABLE `actcodes` (
+	`actcodeid`                bigint unsigned                           NOT NULL,
+	`name`                   varchar(255)    DEFAULT ''                NOT NULL,
+	`Remaining`               integer         DEFAULT '0'               NOT NULL,
+    `date`                    date     DEFAULT '2000-01-01'                  NOT NULL,
+    `act_md5`                    varchar(32)     DEFAULT ''                  NOT NULL,
+    `date_md5`                   varchar(32)     DEFAULT ''                  NOT NULL,
+	PRIMARY KEY (actcodeid)
+) ENGINE=InnoDB;

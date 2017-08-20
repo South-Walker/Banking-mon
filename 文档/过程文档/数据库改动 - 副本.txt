@@ -1,4 +1,4 @@
-﻿#数据库TODO修改
+#数据库TODO修改
 ##简单替换zabbix->bankingmon
 mysql/data.sql:1062
 INSERT INTO `triggers` (`triggerid`,`expression`,`description`,`url`,`status`,`priority`,`comments`,`templateid`,`type`,`flags`,`recovery_mode`,`recovery_expression`,`correlation_mode`,`correlation_tag`,`manual_close`) values ('13025','{12549}=1','Zabbix agent on {HOST.NAME} is unreachable for 5 minutes','','0','3','',NULL,'0','0','0','','0','','0');
@@ -265,6 +265,14 @@ data.sql:1786
 data.sql:1787
 data.sql:1788
 data.sql:1789
+
+#修改默认端口
+mysql\schema.sql:280
+CREATE TABLE `interface` `port`                   varchar(64)     DEFAULT '9610' 
+
+postgresql/patch.sql:303
+port            integer         DEFAULT '9611' NOT NULL,
+
 
 
 

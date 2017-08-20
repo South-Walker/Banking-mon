@@ -393,3 +393,11 @@ include/classes/setup/CSetupWizard.php:289
 (new CNumericBox('zbx_server_port', $this->getConfig('ZBX_SERVER_PORT', '9611'), 5, false, false, false))
 include/classes/setup/CSetupWizard.php:504
 $this->setConfig('ZBX_SERVER_PORT', getRequest('zbx_server_port', $this->getConfig('ZBX_SERVER_PORT', '9611')));
+
+##items
+提示的修改//这里的items可能一个有用的都没有
+include/classes/items/CHelpItems.php:882
+include/classes/items/CHelpItems.php:886
+include/classes/items/CHelpItems.php:890
+include/classes/items/CHelpItems.php:894
+include/classes/items/CHelpItems.php:898

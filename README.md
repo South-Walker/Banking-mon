@@ -127,6 +127,9 @@ Bankingmon
 >* 肖第十七次修改
 >* 修改了images表内容，使得原jpg格式图片修改为png
 
+#### 2017.8.24
+>* 肖第十八次修改
+>* 修改了zabbix-3.2.6\src\zabbix_server\poller\checks_agent.c，第131,137,142行
 
 
 #### 2017.7.11

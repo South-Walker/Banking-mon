@@ -128,18 +128,18 @@ int	get_value_agent(DC_ITEM *item, AGENT_RESULT *result)
 			if (sizeof(ZBX_NOTSUPPORTED) < s.read_bytes)
 				SET_MSG_RESULT(result, zbx_dsprintf(NULL, "%s", s.buffer + sizeof(ZBX_NOTSUPPORTED)));
 			else
-				SET_MSG_RESULT(result, zbx_strdup(NULL, "Not supported by Zabbix Agent"));
+				SET_MSG_RESULT(result, zbx_strdup(NULL, "Not supported by Bankingmon Agent"));
 
 			ret = NOTSUPPORTED;
 		}
 		else if (0 == strcmp(s.buffer, ZBX_ERROR))
 		{
-			SET_MSG_RESULT(result, zbx_strdup(NULL, "Zabbix Agent non-critical error"));
+			SET_MSG_RESULT(result, zbx_strdup(NULL, "Bankingmon Agent non-critical error"));
 			ret = AGENT_ERROR;
 		}
 		else if (0 == received_len)
 		{
-			SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Received empty response from Zabbix Agent at [%s]."
+			SET_MSG_RESULT(result, zbx_dsprintf(NULL, "Received empty response from Bankingmon Agent at [%s]."
 					" Assuming that agent dropped connection because of access permissions.",
 					item->interface.addr));
 			ret = NETWORK_ERROR;
